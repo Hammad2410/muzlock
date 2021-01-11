@@ -1,0 +1,23 @@
+export const Colors = {
+    backgroundColor: '#030303',
+    white: '#FFFFFF',
+    NewBackgroundColor: '#242424',
+    backcolor: '#333333',
+    divider: '#D8D8D8',
+    black: '#000000',
+    lightBlack: 'rgb(51,51,51)',
+    gold: '#D2A91B',
+    grey: '#B0B0B0',
+    grayButton: '#707070',
+    chatBubbleOtherColor: "rgb(204,172,55)",
+    darkGrey: '#1A1A1A',
+    smallportion: '#454545',
+    smokeWhite: "#F3F3F3",
+    skip: "#9A9A9A",
+    Draft: '#C4C4C4',
+    lineColor: "rgba(255,255,255,0.5)",
+    otherChatBubbleColor: '#DADADA',
+    textGrey: '#858E99',
+    chatPlaceHolderColor: '#A1A1A1',
+    incomingCardColorOpened: "#272727"
+}

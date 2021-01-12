@@ -19,5 +19,6 @@ export const Colors = {
     otherChatBubbleColor: '#DADADA',
     textGrey: '#858E99',
     chatPlaceHolderColor: '#A1A1A1',
-    incomingCardColorOpened: "#272727"
+    incomingCardColorOpened: "#272727",
+    button: "#F2384A"
 }

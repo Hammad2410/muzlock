@@ -17,7 +17,7 @@ import {
 import Navigator from './src/navigator';
 
 
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" />

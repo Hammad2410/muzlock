@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { Content, Button, Container } from 'native-base';
 import Swiper from '../../components/Swiper';
-import { View, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text, Image } from 'react-native';
 import styles from './styles';
 import GradientText from '../../components/GradientText';
+import { heightPercentageToDP, widthPercentageToDP } from "../../components/React Native Responsive Screen";
 
 
 function welcome(props) {
@@ -37,58 +38,79 @@ function welcome(props) {
                 ref={swiper}
                 onIndexChanged={(index) => setIdActive(index)}>
                 <View style={styles.IntroView}>
-                    <GradientText />
+
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/logo.png")}
+                        style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
+                    />
+                    <Text style={styles.title}>MuzLock</Text>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/intro/slide-1.png")}
+                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                    />
+
+                    <GradientText text={"Discover"} />
                     <Text style={styles.title}>Discover & Meet Single Muslims Nearby</Text>
-                    {/* <Image
-                        resizeMode="contain"
-                        style={{
-                            position: "absolute",
-                            marginTop: heightPercentageToDP("20%"),
-                            height: heightPercentageToDP("50%"),
-                            width: widthPercentageToDP("55%")
-                        }} */}
-                    {/* // source={require("../../images/appIntro/4.png")} 
-                        /> */}
+
+
+
+
                 </View>
 
 
                 <View style={styles.IntroView}>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/logo.png")}
+                        style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
+                    />
+                    <Text style={styles.title}>MuzLock</Text>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/intro/slide-2.png")}
+                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                    />
+
+                    <GradientText text={"Match"} />
                     <Text style={styles.title}>If other user also like your request then its a match</Text>
-                    {/* <Image
-                        resizeMode="contain"
-                        style={{
-                            position: "absolute",
-                            marginTop: heightPercentageToDP("20%"),
-                            height: heightPercentageToDP("50%"),
-                            width: widthPercentageToDP("55%")
-                        }}
-                        source={require("../../images/appIntro/1.png")} /> */}
+
                 </View>
 
                 <View style={styles.IntroView}>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/logo.png")}
+                        style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
+                    />
+                    <Text style={styles.title}>MuzLock</Text>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/intro/slide-3.png")}
+                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                    />
+
+                    <GradientText text={"Audio/Video Calls"} />
                     <Text style={styles.title}>Unlimited Audio/Video Calls without compromising your privacy</Text>
-                    {/* <Image
-                        resizeMode="contain"
-                        style={{
-                            position: "absolute",
-                            marginTop: heightPercentageToDP("20%"),
-                            height: heightPercentageToDP("50%"),
-                            width: widthPercentageToDP("55%")
-                        }}
-                        source={require("../../images/appIntro/2.png")} /> */}
                 </View>
 
                 <View style={styles.IntroView}>
-                    <Text style={styles.title}>Go premium for an extra boost</Text>
-                    {/* <Image
+                    <Image
                         resizeMode="contain"
-                        style={{
-                            position: "absolute",
-                            marginTop: heightPercentageToDP("20%"),
-                            height: heightPercentageToDP("50%"),
-                            width: widthPercentageToDP("55%")
-                        }}
-                        source={require("../../images/appIntro/3.png")} /> */}
+                        source={require("../../assets/logo.png")}
+                        style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
+                    />
+                    <Text style={styles.title}>MuzLock</Text>
+                    <Image
+                        resizeMode="contain"
+                        source={require("../../assets/intro/slide-4.png")}
+                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                    />
+
+                    <GradientText text={"Premium Club"} />
+                    <Text style={styles.title}>Go premium for an extra boost</Text>
+
                 </View>
             </Swiper>
             <View style={{ flexDirection: 'row', marginVertical: 50, justifyContent: 'space-around' }}>

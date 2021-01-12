@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
     },
     title: {
-        position: "absolute",
+        //position: "absolute",
         alignSelf: "center",
         fontSize: heightPercentageToDP("4%"),
         color: Colors.black,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         borderWidth: 1
     },
     activedot: {
-        backgroundColor: Colors.gold,
+        backgroundColor: Colors.button,
         width: 12,
         height: 12,
         borderRadius: 6,
@@ -61,12 +61,12 @@ const styles = StyleSheet.create({
     IntroView: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        //justifyContent: 'center'
     },
     IntroBtn: {
         flex: 1,
         marginBottom: 10,
-        backgroundColor: Colors.gold,
+        backgroundColor: Colors.button,
         alignSelf: 'center',
         justifyContent: 'center',
         marginHorizontal: 25

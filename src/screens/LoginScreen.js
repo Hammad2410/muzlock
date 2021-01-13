@@ -20,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
             <View style={styles.logoIconView}>
                 <Image
                     style={{ alignContent: 'center', width: wp('25%'), height: hp('10%') }}
-                    source={require('../assets/Logo.png')} />
+                    source={require('../assets/logo.png')} />
                 <Text style={{ fontSize: 18, color: '#fff', fontWeight: 'bold', alignSelf: 'center' }}>MuzLock</Text>
             </View>
 

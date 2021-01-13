@@ -2,7 +2,7 @@ import React from "react"
 import { StyleSheet } from "react-native"
 import { Colors } from "../../styles/colors";
 import { heightPercentageToDP } from "../../components/React Native Responsive Screen";
-
+import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 const styles = StyleSheet.create({
     mainContent: {
         flex: 1,
@@ -75,6 +75,19 @@ const styles = StyleSheet.create({
         color: 'white',
         alignSelf: 'center',
         fontSize: 14,
+    },
+    continueBtn:
+    {
+        marginTop: '5%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor: '#eb3f50',
+        width: wp('35%'),
+        borderRadius: 20,
+        height: 40,
+        backgroundColor: '#f2384a'
     }
 });
 

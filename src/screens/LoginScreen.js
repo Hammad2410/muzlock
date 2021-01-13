@@ -29,7 +29,9 @@ const LoginScreen = ({ navigation }) => {
                 <Text style={[styles.textJourneyMarriage, { fontSize: 20, fontWeight: 'bold' }]}>Virtuos - Secure - Halal</Text>
                 <Text style={styles.textJourneyMarriage}>Start Your Journey To Marriage</Text>
             </View>
-            <TouchableOpacity style={styles.btnstyle}>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('VerifyNumber')}
+                style={styles.btnstyle}>
                 <Icon style={{ marginLeft: '5%' }}
                     name="call" size={30} color="red" />
                 <Text style={styles.btntextstyle}>Login With Number</Text>

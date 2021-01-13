@@ -6,13 +6,18 @@ import VerifyNumber from '../screens/VerifyNumber';
 import ConfirmationCode from '../screens/ConfirmationCode';
 import LoginScreen from '../screens/LoginScreen';
 import Matches from '../screens/Matches';
+import EnableLocation from '../screens/EnableLocation';
+import DateOfBirth from '../screens/DateOfBirth';
+import Gender from '../screens/Gender';
+import SelfieVerification from '../screens/SelfieVerfication';
+import Settings from '../screens/Settings';
 
 const Stack = createStackNavigator();
 
 const main = () => {
     return (
         <View style={{ flex: 1 }}>
-            <Stack.Navigator initialRouteName="Matches">
+            <Stack.Navigator initialRouteName="Settings">
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
                 <Stack.Screen component={VerifyNumber} name="VerifyNumber"
@@ -25,6 +30,20 @@ const main = () => {
                     options={{ header: () => null }}
                 />
                 <Stack.Screen component={Matches} name="Matches"
+                <Stack.Screen component={DateOfBirth} name="DateOfBirth"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Gender} name="Gender"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={SelfieVerification} name="SelfieVerification"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={EnableLocation} name="EnableLocation"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Settings} name="Settings"
                     options={{ header: () => null }}
                 />
 

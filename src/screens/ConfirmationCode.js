@@ -32,7 +32,10 @@ const ConfirmationCode = ({ navigation }) => {
                 marginTop: '2%'
             }}>
                 <Text style={{ fontSize: 14 }}>Enter the code sent to</Text>
-                <Text style={{ color: 'red', fontWeight: 'bold', fontSize: 15 }}>  +44xxxxxxx</Text>
+                <Text style={{
+                    color: 'red', fontWeight: 'bold',
+                    fontSize: 15
+                }}>  +44xxxxxxx</Text>
             </View>
 
 

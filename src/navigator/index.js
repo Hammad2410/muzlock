@@ -5,6 +5,7 @@ import Welcome from '../screens/welcome';
 import VerifyNumber from '../screens/VerifyNumber';
 import ConfirmationCode from '../screens/ConfirmationCode';
 import LoginScreen from '../screens/LoginScreen';
+import Matches from '../screens/Matches';
 import EnableLocation from '../screens/EnableLocation';
 import DateOfBirth from '../screens/DateOfBirth';
 import Gender from '../screens/Gender';
@@ -28,6 +29,7 @@ const main = () => {
                 <Stack.Screen component={LoginScreen} name="LoginScreen"
                     options={{ header: () => null }}
                 />
+                <Stack.Screen component={Matches} name="Matches"
                 <Stack.Screen component={DateOfBirth} name="DateOfBirth"
                     options={{ header: () => null }}
                 />

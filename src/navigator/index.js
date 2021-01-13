@@ -10,6 +10,13 @@ import ExploreScreen from '../screens/explore';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Colors } from '../styles/colors';
 import { BottomNavigation } from 'react-native-paper';
+import Matches from '../screens/Matches';
+import EnableLocation from '../screens/EnableLocation';
+import DateOfBirth from '../screens/DateOfBirth';
+import Gender from '../screens/Gender';
+import SelfieVerification from '../screens/SelfieVerfication';
+import Settings from '../screens/Settings';
+
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -46,7 +53,9 @@ const MyTabs = () => {
 const main = () => {
     return (
         <View style={{ flex: 1 }}>
+
             <Stack.Navigator initialRouteName="tab">
+
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
                 <Stack.Screen component={VerifyNumber} name="VerifyNumber"
@@ -58,7 +67,24 @@ const main = () => {
                 <Stack.Screen component={LoginScreen} name="LoginScreen"
                     options={{ header: () => null }}
                 />
+
                 <Stack.Screen component={MyTabs} name="tab"
+
+                <Stack.Screen component={Matches} name="Matches"
+                <Stack.Screen component={DateOfBirth} name="DateOfBirth"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Gender} name="Gender"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={SelfieVerification} name="SelfieVerification"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={EnableLocation} name="EnableLocation"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Settings} name="Settings"
                     options={{ header: () => null }}
                 />
 

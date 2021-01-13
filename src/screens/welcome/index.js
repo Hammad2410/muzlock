@@ -16,7 +16,9 @@ function welcome(props) {
     const onPressNext = () => {
         if (idActive == 3) {
             //  _onDone();
+
             props.navigation.navigate("VerifyNumber")
+
             return
         }
         swiper.current.scrollBy(1);
@@ -113,7 +115,7 @@ function welcome(props) {
 
                 </View>
             </Swiper>
-            <View style={{ flexDirection: 'row', marginVertical: 50, justifyContent: 'space-around' }}>
+            <View style={{ flexDirection: 'row', marginVertical: 10, justifyContent: 'space-around' }}>
                 {idActive != 0 && <Button
                     onPress={() => onPressBack()}
                     rounded

@@ -1,13 +1,13 @@
 export const Colors = {
-    backgroundColor: '#030303',
+    badge: '#444543',
     white: '#FFFFFF',
-    NewBackgroundColor: '#242424',
+    backgroundColor: '#FAFAFA',
     backcolor: '#333333',
     divider: '#D8D8D8',
     black: '#000000',
     lightBlack: 'rgb(51,51,51)',
     gold: '#D2A91B',
-    grey: '#B0B0B0',
+    grey: '#C0C0C0',
     grayButton: '#707070',
     chatBubbleOtherColor: "rgb(204,172,55)",
     darkGrey: '#1A1A1A',
@@ -17,8 +17,9 @@ export const Colors = {
     Draft: '#C4C4C4',
     lineColor: "rgba(255,255,255,0.5)",
     otherChatBubbleColor: '#DADADA',
-    textGrey: '#858E99',
+    textGrey: '#C0C0C0',
     chatPlaceHolderColor: '#A1A1A1',
     incomingCardColorOpened: "#272727",
-    button: "#F2384A"
+    button: "#F2384A",
+    purple: "#622BBE"
 }

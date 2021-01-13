@@ -16,7 +16,9 @@ function welcome(props) {
     const onPressNext = () => {
         if (idActive == 3) {
             //  _onDone();
-            props.navigation.navigate('LoginScreen')
+
+            props.navigation.navigate("VerifyNumber")
+
             return
         }
         swiper.current.scrollBy(1);
@@ -129,9 +131,6 @@ function welcome(props) {
                     <Text style={styles.IntroText}>{idActive === 3 || idActive === 0 ? 'Get Started' : 'Next'}</Text>
                 </Button>
             </View>
-            {/* <TouchableOpacity onPress={() => _onDone()}>
-                    <Text style={[styles.skipText]}>Skip</Text>
-                </TouchableOpacity> */}
         </Content>
     )
 }

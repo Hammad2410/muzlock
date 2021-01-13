@@ -16,7 +16,7 @@ import DateOfBirth from '../screens/DateOfBirth';
 import Gender from '../screens/Gender';
 import SelfieVerification from '../screens/SelfieVerfication';
 import Settings from '../screens/Settings';
-
+import ComingSoon from '../screens/comingSoon';
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -32,8 +32,8 @@ const MyTabs = () => {
     const renderScene = BottomNavigation.SceneMap({
         home: HomeScreen,
         explore: ExploreScreen,
-        chat: Welcome,
-        settings: VerifyNumber,
+        chat: ComingSoon,
+        settings: ComingSoon,
     });
 
 
@@ -54,7 +54,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="tab">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -68,9 +68,10 @@ const main = () => {
                     options={{ header: () => null }}
                 />
 
-                <Stack.Screen component={MyTabs} name="tab"
+                <Stack.Screen component={MyTabs} name="tab" options={{ header: () => null }} />
 
-                <Stack.Screen component={Matches} name="Matches"
+                <Stack.Screen component={Matches} name="Matches" />
+
                 <Stack.Screen component={DateOfBirth} name="DateOfBirth"
                     options={{ header: () => null }}
                 />

@@ -46,6 +46,7 @@ const ConfirmationCode = ({ navigation }) => {
                     {...props}
                     value={value}
                     onChangeText={setValue}
+                    onSubmitEditing={() => navigation.navigate('DateOfBirth')}
                     cellCount={CELL_COUNT}
                     rootStyle={styles.codeFieldRoot}
                     keyboardType="number-pad"

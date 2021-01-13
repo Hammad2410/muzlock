@@ -5,15 +5,16 @@ import Welcome from '../screens/welcome';
 import VerifyNumber from '../screens/VerifyNumber';
 import ConfirmationCode from '../screens/ConfirmationCode';
 import LoginScreen from '../screens/LoginScreen';
+import Matches from '../screens/Matches';
 
 const Stack = createStackNavigator();
 
 const main = () => {
     return (
         <View style={{ flex: 1 }}>
-            <Stack.Navigator initialRouteName="VerifyNumber">
-                {/* <Stack.Screen component={Welcome} name={"welcome"}
-                    options={{ header: () => null }} /> */}
+            <Stack.Navigator initialRouteName="Matches">
+                <Stack.Screen component={Welcome} name={"welcome"}
+                    options={{ header: () => null }} />
                 <Stack.Screen component={VerifyNumber} name="VerifyNumber"
                     options={{ header: () => null }}
                 />
@@ -21,6 +22,9 @@ const main = () => {
                     options={{ header: () => null }}
                 />
                 <Stack.Screen component={LoginScreen} name="LoginScreen"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Matches} name="Matches"
                     options={{ header: () => null }}
                 />
 

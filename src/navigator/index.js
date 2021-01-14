@@ -17,6 +17,7 @@ import Gender from '../screens/Gender';
 import SelfieVerification from '../screens/SelfieVerfication';
 import Settings from '../screens/Settings';
 import ComingSoon from '../screens/comingSoon';
+import Chat from '../screens/chat';
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -54,7 +55,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="welcome">
+            <Stack.Navigator initialRouteName="tab">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />

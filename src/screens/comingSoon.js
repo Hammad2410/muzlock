@@ -1,22 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Image, ImageBackground, StyleSheet, } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Content } from 'native-base';
-import {
-    CodeField,
-    Cursor,
-    useBlurOnFulfill,
-    useClearByFocusCell,
-} from 'react-native-confirmation-code-field';
-const CELL_COUNT = 6;
+
 const ComingSoon = ({ navigation }) => {
-    const [value, setValue] = useState('');
-    const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
-    const [props, getCellOnLayoutHandler] = useClearByFocusCell({
-        value,
-        setValue,
-    });
+
     return (
         <Content contentContainerStyle={{ flex: 1 }}>
 

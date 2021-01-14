@@ -11,7 +11,7 @@ const Gender = ({ navigation }) => {
             <View style={{ justifyContent: 'center' }}>
                 <Logo />
                 <Text style={{ marginTop: '5%', fontSize: 18, alignSelf: 'center' }}>What's Your Gender</Text>
-                <Image style={{ marginTop: '5%', width: wp('25%'), height: hp('15%'), alignSelf: 'center' }}
+                <Image style={{ marginTop: '5%', width: wp('28%'), height: hp('15%'), alignSelf: 'center' }}
                     source={require('../assets/Birthdayormalefemalepage/sex.png')} />
 
                 <TouchableOpacity style={styles.genderBtn}>

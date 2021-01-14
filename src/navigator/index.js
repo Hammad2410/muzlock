@@ -17,7 +17,10 @@ import Gender from '../screens/Gender';
 import SelfieVerification from '../screens/SelfieVerfication';
 import Settings from '../screens/Settings';
 import ComingSoon from '../screens/comingSoon';
+import Shield from '../screens/Shield';
+import Premium from '../screens/Premium';
 import Chat from '../screens/chat';
+
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -87,6 +90,12 @@ const main = () => {
                     options={{ header: () => null }}
                 />
                 <Stack.Screen component={Settings} name="Settings"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Shield} name="Shield"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Premium} name="Premium"
                     options={{ header: () => null }}
                 />
 

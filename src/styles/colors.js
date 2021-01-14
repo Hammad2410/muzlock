@@ -21,5 +21,6 @@ export const Colors = {
     chatPlaceHolderColor: '#A1A1A1',
     incomingCardColorOpened: "#272727",
     button: "#F2384A",
-    purple: "#622BBE"
+    purple: "#622BBE",
+    greytext:"#808080"
 }

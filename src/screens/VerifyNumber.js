@@ -64,6 +64,7 @@ const VerifyNumber = ({ navigation }) => {
                 </TouchableOpacity>
                 {/* Phone Number */}
                 <TextInput
+                    keyboardType="number-pad"
                     style={{
                         flex: 1,
                         borderBottomColor: '#f2384a',

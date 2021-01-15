@@ -6,7 +6,10 @@ const Logo = () => {
     return (
         <View>
             <Image source={require('../assets/logo.png')}
-                style={{ width: wp('25%'), height: hp('10%'), marginTop: '5%', alignSelf: 'center', }} />
+                style={{
+                    width: wp('28%'), height: hp('10%'),
+                    marginTop: '5%', alignSelf: 'center',
+                }} />
         </View>
     )
 }

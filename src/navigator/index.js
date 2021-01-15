@@ -17,9 +17,13 @@ import Gender from '../screens/Gender';
 import SelfieVerification from '../screens/SelfieVerfication';
 import Settings from '../screens/Settings';
 import ComingSoon from '../screens/comingSoon';
+import Filter from '../screens/Filter';
+import Profile from '../screens/Profile';
 import Shield from '../screens/Shield';
 import Premium from '../screens/Premium';
 import Chat from '../screens/chat';
+import mainChat from '../screens/chat';
+
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -36,8 +40,9 @@ const MyTabs = () => {
     const renderScene = BottomNavigation.SceneMap({
         home: HomeScreen,
         explore: ExploreScreen,
-        chat: ComingSoon,
-        settings: ComingSoon,
+        chat: mainChat,
+        settings: Profile,
+
     });
 
 
@@ -58,7 +63,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="tab">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -92,10 +97,16 @@ const main = () => {
                 <Stack.Screen component={Settings} name="Settings"
                     options={{ header: () => null }}
                 />
+
+                <Stack.Screen component={Filter} name="Filter" />
+
                 <Stack.Screen component={Shield} name="Shield"
                     options={{ header: () => null }}
                 />
                 <Stack.Screen component={Premium} name="Premium"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Profile} name="Profile"
                     options={{ header: () => null }}
                 />
 

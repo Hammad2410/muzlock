@@ -23,7 +23,7 @@ const SelfieVerification = ({ navigation }) => {
 
             <TouchableOpacity style={styles.camerBtn}>
                 <Image
-                    style={{ width: wp('42%'), height: hp('25%') }}
+                    style={{ alignContent: 'center', width: wp('50%'), height: hp('25%') }}
                     source={require('../assets/selfieverification/photo-camera.png')} />
             </TouchableOpacity>
 
@@ -52,25 +52,25 @@ const styles = StyleSheet.create({
     }
     , selfieVerifText:
     {
-        fontSize: 20,
+        fontSize: 20, textAlign: 'center',
         marginTop: '5%', justifyContent: 'center',
         alignSelf: 'center',
         color: '#c414ff', fontWeight: 'bold'
     },
     needSelfieVerifText:
     {
-        width: wp('50%'), marginTop: '1%',
+        width: wp('50%'), marginTop: '1%', textAlign: 'center',
         fontSize: 15, justifyContent: 'center', alignSelf: 'center'
     },
     onlyForUsText:
     {
-        marginLeft: '15%',
+        marginLeft: '3%', textAlign: 'center',
         width: wp('50%'),
         fontSize: 15, justifyContent: 'center', alignSelf: 'center'
     },
     notMakePublicText:
     {
-        marginLeft: '2%',
+        marginLeft: '2%', textAlign: 'center',
         width: wp('50%'),
         fontSize: 15, justifyContent: 'center', alignSelf: 'center'
     },

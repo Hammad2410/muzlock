@@ -18,15 +18,13 @@ import SelfieVerification from '../screens/SelfieVerfication';
 import Settings from '../screens/Settings';
 import ComingSoon from '../screens/comingSoon';
 import Filter from '../screens/Filter';
-<<<<<<< HEAD
 import Profile from '../screens/Profile';
-=======
 import Shield from '../screens/Shield';
 import Premium from '../screens/Premium';
 import Chat from '../screens/chat';
+import mainChat from '../screens/chat';
 
 
->>>>>>> 911aef3cd55b54b064359c9249e112d503cca7ab
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -42,8 +40,9 @@ const MyTabs = () => {
     const renderScene = BottomNavigation.SceneMap({
         home: HomeScreen,
         explore: ExploreScreen,
-        chat: ComingSoon,
-        settings: ComingSoon,
+        chat: mainChat,
+        settings: Profile,
+
     });
 
 
@@ -63,12 +62,8 @@ const MyTabs = () => {
 const main = () => {
     return (
         <View style={{ flex: 1 }}>
-<<<<<<< HEAD
 
-            <Stack.Navigator initialRouteName="Profile">
-=======
-            <Stack.Navigator initialRouteName="Filter">
->>>>>>> 911aef3cd55b54b064359c9249e112d503cca7ab
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -103,7 +98,7 @@ const main = () => {
                     options={{ header: () => null }}
                 />
 
-                <Stack.Screen component={Filter} name="Filter"
+                <Stack.Screen component={Filter} name="Filter" />
 
                 <Stack.Screen component={Shield} name="Shield"
                     options={{ header: () => null }}

@@ -5,6 +5,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { Content } from 'native-base';
 const Preferences = ({ icon, name, subname, iconcolor }) => {
     return (
+
         <View style={{
             flexDirection: 'row', marginTop: '6%',
             width: wp('100%'),

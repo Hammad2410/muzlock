@@ -80,24 +80,69 @@ const mainChat = ({ navigation }) => {
                     renderItem={({ item, index }) => (
                         <View style={{ margin: 10, justifyContent: 'center', alignItems: 'center' }}>
                             <Thumbnail large source={item.url} />
-                            <Text style={{ fontWeight: 'bold', margin: 5 }} >{item.name}</Text>
+                            <Text style={{
+                                fontWeight: 'bold',
+                                margin: 5
+                            }} >{item.name}</Text>
                         </View>
                     )
                     }
                 />
 
-                <Text style={{ fontWeight: 'bold', fontSize: 24, marginVertical: 10 }}>Yours Chats</Text>
+            </View>
+
+            <Text style={{
+                fontWeight: 'bold', alignSelf: 'center',
+                fontSize: 24, marginVertical: 10
+            }}>Yours Chats</Text>
+            <View style={{ flexDirection: 'row', flex: 1, }}>
                 <FlatList
                     data={chat}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item, index }) => (
-                        <View style={{ margin: 10, justifyContent: 'center', flexDirection: 'row', width: '100%' }}>
-                            <Thumbnail large source={item.url} />
-                            <View style={{}} >
-                                <Text style={{ fontWeight: 'bold', margin: 2.5 }}>{item.name}</Text>
-                                <Text style={{ margin: 2.5 }}>{item.occupation}</Text>
-                                <Text style={{ fontWeight: 'bold', margin: 2.5 }}>Hi</Text>
+                        <View style={{
+                            width: '100%',
+                            marginVertical: '5%',
+                            // margin: 10,
+                            // justifyContent: 'center',
+                            flexDirection: 'row', flex: 1,
+                            // width: '100%'
+                        }}>
+                            <Thumbnail
+
+                                large source={item.url} />
+                            <View
+                                style={{
+                                    marginLeft: '4%',
+                                    flex: 1
+
+                                    // justifyContent: 'flex-end'
+                                }} >
+                                <Text style={{
+                                    fontWeight: 'bold',
+                                    margin: 2.5
+                                }}>{item.name}</Text>
+                                <Text
+                                    style={{ margin: 2.5 }}>{item.occupation}</Text>
+                                <Text
+                                    style={{
+                                        fontWeight: 'bold',
+                                        margin: 2.5
+                                    }}>Hi</Text>
                             </View>
+
+                            <View style={{ marginRight: '2%' }}>
+                                <Text style={{ color: 'red' }}>Yesterday</Text>
+                                <Text style={{
+                                    marginVertical: '10%',
+                                    textAlign: 'center', padding: 5,
+                                    color: '#fff',
+                                    backgroundColor: 'red', borderColor: 'red',
+                                    borderRadius: 20, height: 30,
+                                    borderWidth: 1
+                                }}>Say Hi</Text>
+                            </View>
+
                         </View>
                     )
                     }

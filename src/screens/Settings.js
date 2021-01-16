@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, ImageBackground, ScrollView, StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Content } from 'native-base';
+import { Content, Header, Right, Left, Body, Thumbnail } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ToggleSwitch from 'toggle-switch-react-native';
 import Logo from '../components/Logo';
@@ -19,33 +19,33 @@ const Settings = ({ navigation }) => {
     const LanguageHandler = () => {
         alert('Language');
     }
-    const LockOnExitHandler = () => {
-        alert('Lock oN Exit')
-    }
     return (
         <ScrollView>
-            <Content contentContainerStyle={{ flex: 1 }}>
+            <Content contentContainerStyle={{ flex: 1, }}>
+                <Header style={{ backgroundColor: '#fff', elevation: 0 }}>
+                    <Left style={{ flex: 1 }} >
+                        <TouchableOpacity
+                            onPress={() => navigation.goBack()}
+                            style={{
+                                width: '50%',
+                                flex: 1,
+                                marginLeft: '4%',
+                                alignContent: 'center', justifyContent: 'center'
+                            }}>
+                            <Icon name="close-outline" size={30} />
+                        </TouchableOpacity>
+                    </Left>
 
-                <View style={{
-                    flexDirection: 'row',
-                    backgroundColor: '#fff'
-                }}>
-                    <TouchableOpacity style={{
-                        width: '50%',
-                        flex: 1,
-                        marginLeft: '4%',
-                        alignContent: 'center', justifyContent: 'center'
-                    }}>
-                        <Icon name="close-outline" size={30} />
-                    </TouchableOpacity>
-                    <Image
-                        style={{
-                            marginHorizontal: '25%',
-                            width: wp('23%'), height: hp('8%'),
-                            alignSelf: 'center'
-                        }}
-                        source={require('../assets/logo.png')} />
-                </View>
+                    <Body style={{ flex: 1 }}>
+                        <Thumbnail square source={require('../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                    </Body>
+
+
+                    <Right style={{ flex: 1 }} />
+
+
+                </Header>
+
                 <View style={{ backgroundColor: '#fff' }}>
                     <Text style={{
                         fontSize: 20, justifyContent: 'center',
@@ -103,9 +103,7 @@ const Settings = ({ navigation }) => {
                     }]}>
                         <Icon name="notifications" size={30} color="red" />
                         <Text style={{ marginTop: '2%', marginLeft: '-50%' }}>Notifications</Text>
-                        {/* <TouchableOpacity onPress={() => alert('Clicked')}>
-                        <Icon name="pencil" size={30} />
-                    </TouchableOpacity> */}
+
                         <TouchableOpacity onPress={() => setNotifications(!Notifications)}>
                             <ToggleSwitch
                                 isOn={Notifications}
@@ -130,13 +128,12 @@ const Settings = ({ navigation }) => {
                     flex: 1,
                     flexDirection: 'row',
                     height: '8%', alignItems: 'center',
-                    backgroundColor: '#fff', marginTop: '7%'
+                    backgroundColor: '#fff', marginTop: '7%',
+                    paddingHorizontal: 5
                 }}>
                     <Icon name="eye" size={30} color="red" />
                     <Text style={{ marginLeft: '4%' }}> Wali</Text>
-                    {/* <TouchableOpacity onPress={() => alert('Clicked')}>
-                        <Icon name="pencil" size={30} />
-                    </TouchableOpacity> */}
+
                     <TouchableOpacity
                         style={{ marginLeft: '70%', flexDirection: 'row' }}
                         onPress={() => alert('Clicked Privacy ')}>
@@ -238,6 +235,6 @@ export default Settings;
 const styles = StyleSheet.create({
     settinginnerview:
     {
-        flexDirection: 'row', justifyContent: 'space-between'
+        flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 5
     }
 })

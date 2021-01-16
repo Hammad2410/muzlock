@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
-import { Content } from 'native-base';
+import { Content, Body, Header, Right, Left, Thumbnail } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import ToggleSwitch from 'toggle-switch-react-native';
@@ -13,7 +13,26 @@ const Filter = ({ navigation }) => {
         <ScrollView>
             <Content contentContainerStyle={{ flex: 1 }}>
 
-                <View style={{
+                <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
+                    <Left style={{ flex: 1 }}>
+                        <TouchableOpacity onPress={() => navigation.goBack()} >
+                            <Icon name="chevron-back" size={30} />
+                        </TouchableOpacity>
+                    </Left>
+                    <Body style={{ flex: 1 }}>
+                        <Thumbnail square source={require('../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                    </Body>
+
+
+                    <Right style={{ flex: 1 }} >
+                        <TouchableOpacity  >
+                            <Text style={{ fontSize: 16, color: 'red' }}>Clear All</Text>
+                        </TouchableOpacity>
+                    </Right>
+
+                </Header>
+
+                {/* <View style={{
                     flexDirection: 'row',
                     justifyContent: 'space-between'
                 }}>
@@ -34,7 +53,7 @@ const Filter = ({ navigation }) => {
                         <Text style={{ fontSize: 16, color: 'red' }}>Clear All</Text>
                     </TouchableOpacity>
 
-                </View>
+                </View> */}
 
                 <View style={{ justifyContent: 'center', marginTop: '6%' }}>
                     <Text style={{ alignSelf: 'center', fontSize: 20, fontWeight: 'bold' }}>Filter</Text>
@@ -59,7 +78,7 @@ const Filter = ({ navigation }) => {
 
 
 
-                <View style={{ flexDirection: 'row', marginTop: '6%', width: wp('100%'), }}>
+                <View style={{ flexDirection: 'row', marginTop: '6%', width: wp('100%'), paddingRight: 5 }}>
                     <Icon style={{ marginLeft: '4%' }} name="lock-closed" size={30}
                         color="red" />
                     <View style={{ marginLeft: '2%', flex: 1 }}>
@@ -145,7 +164,7 @@ const Filter = ({ navigation }) => {
                 {/* Without Children */}
 
 
-                <View style={{ flexDirection: 'row', marginTop: '6%', width: wp('100%'), }}>
+                <View style={{ flexDirection: 'row', marginTop: '6%', width: wp('100%'), paddingRight: 5 }}>
                     <Icon style={{ marginLeft: '4%' }} name="help"
                         size={30}
                         color="yellow" />

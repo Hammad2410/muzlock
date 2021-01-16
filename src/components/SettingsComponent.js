@@ -14,6 +14,7 @@ const SettingComponent = ({ iconLeft, textName, iconRight, iconLeftColor, iconRi
             backgroundColor: '#fff',
             flexDirection: 'row',
             width: wp('100%'),
+            paddingHorizontal: 5
         }}>
             <Icon name={iconLeft} size={30} color={iconLeftColor} />
 

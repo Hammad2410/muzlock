@@ -19,9 +19,9 @@ const Settings = ({ navigation }) => {
     const LanguageHandler = () => {
         alert('Language');
     }
-    // const LockOnExitHandler=()=>{
-    //     alert('Lock oN Exit')
-    // }
+    const LockOnExitHandler = () => {
+        alert('Lock oN Exit')
+    }
     return (
         <ScrollView>
             <Content contentContainerStyle={{ flex: 1 }}>
@@ -55,12 +55,17 @@ const Settings = ({ navigation }) => {
 
                     {/* Email        */}
 
-                    <SettingComponent iconLeft="mail" textName={email} iconRight="pencil" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent
+                        iconLeft="mail" textName={email}
+                        iconRight="pencil" iconLeftColor="red"
+                        iconRightColor="grey" />
 
 
                     {/* NumberVerification */}
 
-                    <SettingComponent iconLeft="help" textName="Number Verification" iconRight="pencil" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent
+                        iconLeft="help" textName="Number Verification"
+                        iconRight="pencil" iconLeftColor="red" iconRightColor="grey" />
 
 
 
@@ -150,7 +155,9 @@ const Settings = ({ navigation }) => {
                         textSecondName="Disabled"
                         iconRightName="chevron-forward"
                         iconLeftClr="red"
-                        iconRightClr="grey" />
+                        iconRightClr="grey"
+                        handler={LockOnExitHandler}
+                    />
                 </View>
 
 
@@ -159,7 +166,11 @@ const Settings = ({ navigation }) => {
                 {/* Language */}
 
                 <View style={{ marginTop: '4%' }}>
-                    <SettingTwoName iconLeftName="language" textFirstName="Language" textSecondName="English" iconRightName="chevron-forward" iconLeftClr="red" iconRightClr="grey" LanguageHandler={LanguageHandler} />
+                    <SettingTwoName iconLeftName="language"
+                        textFirstName="Language" textSecondName="English"
+                        iconRightName="chevron-forward"
+                        iconLeftClr="red" iconRightClr="grey"
+                        handler={LanguageHandler} />
                 </View>
 
 

@@ -30,7 +30,9 @@ const SettingComponent = ({ iconLeft, textName, iconRight, iconLeftColor, iconRi
 }
 export default SettingComponent;
 
-export const SettingTwoName = ({ iconLeftName, textFirstName, textSecondName, iconRightName, iconLeftClr, iconRightClr, LanguageHandler }) => {
+export const SettingTwoName = ({ iconLeftName, textFirstName,
+    textSecondName, iconRightName, iconLeftClr, iconRightClr,
+    handler }) => {
     return (
         <View style={{
             // flex: 1,
@@ -61,7 +63,7 @@ export const SettingTwoName = ({ iconLeftName, textFirstName, textSecondName, ic
             <Text >{textSecondName}</Text>
             <TouchableOpacity
                 style={{ alignSelf: 'center' }}
-                onPress={() => LanguageHandler()}>
+                onPress={() => handler()}>
 
                 <Icon
                     name={iconRightName} size={20} color={iconRightClr} />

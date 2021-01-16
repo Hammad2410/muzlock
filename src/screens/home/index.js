@@ -12,7 +12,7 @@ const homeScreen = ({ navigation }) => {
         <Content contentContainerStyle={{ flex: 1 }}>
             <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
                 <Left style={{ flex: 1 }}>
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={() => navigation.navigate('Matches')} >
                         <Thumbnail square source={require('../../assets/swipepageicons/heart.png')} />
                     </TouchableOpacity>
                 </Left>
@@ -22,7 +22,7 @@ const homeScreen = ({ navigation }) => {
 
 
                 <Right style={{ flex: 1 }} >
-                    <TouchableOpacity  >
+                    <TouchableOpacity onPress={() => navigation.navigate('Filter')} >
                         <Thumbnail square source={require('../../assets/swipepageicons/filter.png')} />
                     </TouchableOpacity>
                 </Right>

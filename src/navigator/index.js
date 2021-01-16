@@ -48,22 +48,64 @@ const MyTabs = () => {
 
 
     return (
-        <BottomNavigation
-            navigationState={{ index, routes }}
-            onIndexChange={setIndex}
-            renderScene={renderScene}
+        // <BottomNavigation
+        //     navigationState={{ index, routes }}
+        //     onIndexChange={setIndex}
+        //     renderScene={renderScene}
+        //     activeColor={Colors.purple}
+        //     inactiveColor={Colors.grey}
+        //     shifting={true}
+        //     barStyle={{ backgroundColor: 'transparent', elevation: 0.5 }}
+        // />
+
+        <Tab.Navigator
+            initialRouteName="Feed"
+            shifting={true}
+            sceneAnimationEnabled={false}
+            barStyle={{ backgroundColor: 'transparent', elevation: 0.5 }}
             activeColor={Colors.purple}
             inactiveColor={Colors.grey}
-            shifting={true}
-            barStyle={{ backgroundColor: 'transparent', elevation: 0.5 }}
-        />
+        >
+            <Tab.Screen
+                name="home"
+                component={HomeScreen}
+                options={{
+                    tabBarIcon: ({ color }) => (<Image source={require('../assets/navigationison/profile-1.png')} style={{ tintColor: color, height: 26, width: 26 }} />),
+                    title: ''
+                }}
+            />
+            <Tab.Screen
+                name="explore"
+                component={ExploreScreen}
+                options={{
+                    tabBarIcon: ({ color }) => (<Image source={require('../assets/navigationison/explore-1.png')} style={{ tintColor: color, height: 26, width: 26 }} />),
+                    title: ''
+                }}
+            />
+            <Tab.Screen
+                name="chatMain"
+                component={mainChat}
+                options={{
+                    tabBarIcon: ({ color }) => (<Image source={require('../assets/navigationison/chat-nav-icon.png')} style={{ tintColor: color, height: 26, width: 26 }} />),
+                    title: ''
+                }}
+            />
+            <Tab.Screen
+                name="settings"
+                component={Profile}
+                options={{
+                    tabBarIcon: ({ color }) => (<Image source={require('../assets/navigationison/settings-1.png')} style={{ tintColor: color, height: 26, width: 26 }} />),
+                    title: ''
+                }}
+            />
+        </Tab.Navigator>
     );
 };
 const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="welcome">
+            <Stack.Navigator initialRouteName="tab">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -79,7 +121,7 @@ const main = () => {
 
                 <Stack.Screen component={MyTabs} name="tab" options={{ header: () => null }} />
 
-                <Stack.Screen component={Matches} name="Matches" />
+                <Stack.Screen component={Matches} name="Matches" options={{ header: () => null }} />
 
                 <Stack.Screen component={DateOfBirth} name="DateOfBirth"
                     options={{ header: () => null }}
@@ -98,7 +140,7 @@ const main = () => {
                     options={{ header: () => null }}
                 />
 
-                <Stack.Screen component={Filter} name="Filter" />
+                <Stack.Screen component={Filter} name="Filter" options={{ header: () => null }} />
 
                 <Stack.Screen component={Shield} name="Shield"
                     options={{ header: () => null }}

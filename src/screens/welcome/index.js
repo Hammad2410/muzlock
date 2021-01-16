@@ -39,7 +39,7 @@ function welcome(props) {
                 loop={false}
                 ref={swiper}
                 onIndexChanged={(index) => setIdActive(index)}>
-                <View style={styles.IntroView}>
+                <View style={styles.IntroView} key={"1"}>
 
                     <Image
                         resizeMode="contain"
@@ -62,7 +62,7 @@ function welcome(props) {
                 </View>
 
 
-                <View style={styles.IntroView}>
+                <View style={styles.IntroView} key={"2"}>
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/logo.png")}
@@ -80,7 +80,7 @@ function welcome(props) {
 
                 </View>
 
-                <View style={styles.IntroView}>
+                <View style={styles.IntroView} key={"3"}>
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/logo.png")}
@@ -97,7 +97,7 @@ function welcome(props) {
                     <Text style={styles.title}>Unlimited Audio/Video Calls without compromising your privacy</Text>
                 </View>
 
-                <View style={styles.IntroView}>
+                <View style={styles.IntroView} key={"4"}>
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/logo.png")}

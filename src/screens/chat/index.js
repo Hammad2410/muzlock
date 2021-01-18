@@ -108,9 +108,12 @@ const mainChat = ({ navigation }) => {
                             flexDirection: 'row', flex: 1,
                             // width: '100%'
                         }}>
-                            <Thumbnail
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate('ChatDetails', { ProfileUrl: item.url, ProfileName: item.name, })}>
+                                <Thumbnail
 
-                                large source={item.url} />
+                                    large source={item.url} />
+                            </TouchableOpacity>
                             <View
                                 style={{
                                     marginLeft: '4%',

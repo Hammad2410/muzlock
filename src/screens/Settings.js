@@ -14,6 +14,9 @@ const Settings = ({ navigation }) => {
     const [Notifications, setNotifications] = useState(false);
     const [VERSION, setVERSION] = useState('v6 1.9990');
 
+    const LockOnExitHandler = () => {
+        alert("Lock")
+    }
 
 
     const LanguageHandler = () => {

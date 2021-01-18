@@ -108,7 +108,7 @@ const Profile = ({ navigation }) => {
             }}>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <TouchableOpacity  >
+                    <TouchableOpacity onPress={() => navigation.navigate('SearchForAnswers')} >
                         <Thumbnail source={require('../assets/settingpage/settingicon/help.png')} />
                     </TouchableOpacity>
                     <Text style={{ marginTop: '5%' }}>Help Center</Text>
@@ -116,7 +116,7 @@ const Profile = ({ navigation }) => {
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <TouchableOpacity  >
+                    <TouchableOpacity onPress={() => navigation.navigate('SuccessStories')} >
                         <Thumbnail source={require('../assets/settingpage/settingicon/success-stories.png')} />
                     </TouchableOpacity>
                     <Text style={{ marginTop: '5%' }}>Success Stories</Text>

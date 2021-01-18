@@ -125,21 +125,21 @@ const ChatDetails = ({ navigation, route }) => {
                             );
                         }}
 
-                        renderSend={(props) => (
-                            <View style={{ flexDirection: 'row', alignItems: 'center', height: 60 }}>
-                                <Icon icon="camera" iconColor="red" size={20}
-                                    style={{ marginHorizontal: 5 }}
-                                // onPress={() => alert('Camera')} 
-                                />
+                        // renderSend={(props) => (
+                        //     <View style={{ flexDirection: 'row', alignItems: 'center', height: 60 }}>
+                        //         <Icon icon="camera" iconColor="red" size={20}
+                        //             style={{ marginHorizontal: 5 }}
+                        //         // onPress={() => alert('Camera')} 
+                        //         />
 
-                                <View >
-                                    <Icon name="ios-send" size={24} color="#ffffff" />
-                                </View>
+                        //         <View >
+                        //             <Icon name="ios-send" size={24} color="#ffffff" />
+                        //         </View>
 
-                            </View>
-                        )}
-                        alwaysShowSend={true}
-                        isTyping={true}
+                        //     </View>
+                        // )}
+                        // alwaysShowSend={true}
+                        // isTyping={true}
                         placeholder="Message"
                         messages={messages}
                         onSend={messages => onSend(messages)}

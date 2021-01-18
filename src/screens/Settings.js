@@ -124,7 +124,9 @@ const Settings = ({ navigation }) => {
 
                 <View style={{ marginTop: '4%' }}>
                     <SettingComponent iconLeft="notifications"
-                        textName="Privacy Policy" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                        textName="Privacy Policy"
+                        iconRight="chevron-forward"
+                        iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
                 <View style={{

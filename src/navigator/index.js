@@ -25,6 +25,8 @@ import Chat from '../screens/chat';
 import mainChat from '../screens/chat';
 import ChatDetails from '../screens/chat/ChatDetails';
 import SearchForAnswer from '../screens/SearchForAnswer';
+import SuccessStories from '../screens/SuccessStories';
+import ProfileDetails from '../screens/ProfileDetailsAddPhotosAndOthers';
 
 
 const Stack = createStackNavigator();
@@ -107,7 +109,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="SearchForAnswers">
+            <Stack.Navigator initialRouteName="ProfileDetails">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -157,7 +159,18 @@ const main = () => {
                 <Stack.Screen component={ChatDetails} name="ChatDetails"
                     options={{ header: () => null }}
                 />
-                <Stack.Screen component={SearchForAnswer} name="SearchForAnswers"
+                <Stack.Screen component={SearchForAnswer}
+                    name="SearchForAnswers"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={SuccessStories}
+                    name="SuccessStories"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={ProfileDetails}
+                    name="ProfileDetails"
                     options={{ header: () => null }}
                 />
 

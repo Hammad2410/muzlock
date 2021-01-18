@@ -18,10 +18,12 @@ const SearchForAnswer = ({ navigation }) => {
                     width: '100%',
                     height: 40, backgroundColor: '#fff'
                 }}>
-                    <TouchableOpacity style={{
-                        marginHorizontal: '4%',
-                        marginVertical: '2%'
-                    }}>
+                    <TouchableOpacity
+                        onPress={() => navigation.goBack()}
+                        style={{
+                            marginHorizontal: '4%',
+                            marginVertical: '2%'
+                        }}>
                         <Icon name="arrow-back-outline" size={20} />
                     </TouchableOpacity>
 

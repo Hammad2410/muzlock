@@ -185,7 +185,7 @@ const Profile = ({ navigation }) => {
                     renderItem={({ item, index }) => (
                         <TouchableOpacity
                             onPress={() => navigation.navigate('Premium')}
-                            style={{ margin: 10 }}>
+                            style={{ margin: 10, marginHorizontal: 10 }}>
                             <Image style={{
                                 width: wp('20%'), height: hp('15%')
                             }}

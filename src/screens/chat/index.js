@@ -95,7 +95,7 @@ const mainChat = ({ navigation }) => {
                 fontWeight: 'bold', alignSelf: 'center',
                 fontSize: 24, marginVertical: 10
             }}>Yours Chats</Text>
-            <View style={{ flexDirection: 'row', flex: 1, }}>
+            <View style={{ flexDirection: 'row', flex: 1, paddingHorizontal: 8 }}>
                 <FlatList
                     data={chat}
                     keyExtractor={(item, index) => index.toString()}

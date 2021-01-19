@@ -5,7 +5,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 export const btn = StyleSheet.create({
     bottomBtn:
     {
-        marginTop: '3%',
+        marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',

@@ -6,24 +6,28 @@ import { Content } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Header, Left, Right, Body, Thumbnail, Button, Title } from 'native-base';
 import { Colors } from '../../styles/colors';
+import Swipeable from 'react-native-gesture-handler/Swipeable'
 
 const homeScreen = ({ navigation }) => {
     return (
         <Content contentContainerStyle={{ flex: 1 }}>
             <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
                 <Left style={{ flex: 1 }}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Matches')} >
-                        <Thumbnail square source={require('../../assets/swipepageicons/heart.png')} />
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Matches')} >
+                        <Thumbnail small
+                            square source={require('../../assets/swipepageicons/heart.png')} />
                     </TouchableOpacity>
                 </Left>
                 <Body style={{ flex: 1 }}>
-                    <Thumbnail square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                    <Thumbnail small square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
                 </Body>
 
 
                 <Right style={{ flex: 1 }} >
                     <TouchableOpacity onPress={() => navigation.navigate('Filter')} >
-                        <Thumbnail square source={require('../../assets/swipepageicons/filter.png')} />
+                        <Thumbnail small
+                            square source={require('../../assets/swipepageicons/filter.png')} />
                     </TouchableOpacity>
                 </Right>
 
@@ -33,6 +37,9 @@ const homeScreen = ({ navigation }) => {
                 data={[1, 2]}
                 renderItem={({ items, index }) => {
                     return (
+                        // <Swipeable
+                        //     renderRightActions={(progress, dragX) => <View />}
+                        // >
                         <View style={{ width: '100%', height: 450, borderRadius: 15, marginVertical: 5, backgroundColor: 'blue', elevation: 5 }}>
                             <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: 450, borderRadius: 15 }} />
 
@@ -53,7 +60,7 @@ const homeScreen = ({ navigation }) => {
                                 </View>
                             </View>
                         </View>
-
+                        // </Swipeable>
                     )
                 }}
                 keyExtractor={(item, index) => index.toString()}

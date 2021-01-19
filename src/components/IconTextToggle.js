@@ -8,7 +8,7 @@ import ToggleSwitch from 'toggle-switch-react-native';
 
 const IconTextToggle = ({ icon, name, itemState, ToggleHandler, size, color }) => {
     return (
-        <View style={[styles.settinginnerview, { marginTop: '6%' }]}>
+        <View style={[styles.settinginnerview, { marginTop: '3%' }]}>
 
             <Icon
                 style={{ alignSelf: 'center' }}
@@ -40,7 +40,7 @@ export default IconTextToggle;
 const styles = StyleSheet.create({
     settinginnerview:
     {
-        height: 40,
+        height: 40, flex: 1,
         flexDirection: 'row', justifyContent: 'space-between',
         paddingHorizontal: 10,
         backgroundColor: '#fff'

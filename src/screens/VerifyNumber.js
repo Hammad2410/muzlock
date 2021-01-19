@@ -88,7 +88,7 @@ const VerifyNumber = ({ navigation }) => {
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('ConfirmationCode')}
-                style={styles.continueBtn}>
+                style={[styles.continueBtn, { marginBottom: 10 }]}>
 
                 <Text style={{ color: '#fff', fontSize: 15 }}>
                     Continue

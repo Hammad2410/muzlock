@@ -7,13 +7,18 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import ToggleSwitch from 'toggle-switch-react-native';
 import Logo from '../components/Logo';
 import SettingComponent, { SettingTwoName } from '../components/SettingsComponent';
-
+import IconTextToggle from '../components/IconTextToggle';
 const Settings = ({ navigation }) => {
     const [email, setEmail] = useState('abc@gmail.com');
     const [fbToggle, setFbToggle] = useState(false);
     const [Notifications, setNotifications] = useState(false);
     const [VERSION, setVERSION] = useState('v6 1.9990');
+    const [wali, setWali] = useState(false);
 
+    const WaliHandler = () => {
+        alert('Wali')
+        setWali(!wali)
+    }
     const LockOnExitHandler = () => {
         alert("Lock")
     }
@@ -21,6 +26,12 @@ const Settings = ({ navigation }) => {
 
     const LanguageHandler = () => {
         alert('Language');
+    }
+    const FbToggleHandler = () => {
+        setFbToggle(!fbToggle)
+    }
+    const NotificationsHandler = () => {
+        setNotifications(!Notifications)
     }
     return (
         <ScrollView>
@@ -74,22 +85,19 @@ const Settings = ({ navigation }) => {
 
                     {/* Login With Facebook */}
 
-                    <View style={[styles.settinginnerview, { marginTop: '2%' }]}>
-                        <Icon name="logo-facebook" size={30} color="blue" />
-                        <Text style={{ marginTop: '2%', marginLeft: '-40%' }}>Login in With facebook </Text>
-                        {/* <TouchableOpacity onPress={() => alert('Clicked')}>
-                        <Icon name="pencil" size={30} />
-                    </TouchableOpacity> */}
-                        <TouchableOpacity onPress={() => setFbToggle(!fbToggle)}>
-                            <ToggleSwitch
-                                isOn={fbToggle}
-                                onColor="green"
-                                offColor="grey"
-                                size="medium"
-                                onToggle={isOn => console.log("changed to : ", isOn)}
+                    <View style={[styles.settinginnerview,
+                    { flexDirection: 'row', flex: 1 }]}>
 
-                            />
-                        </TouchableOpacity>
+
+                        <IconTextToggle icon="logo-facebook" name="Login With Facebook"
+                            itemState={fbToggle}
+                            ToggleHandler={FbToggleHandler}
+                            size={30}
+                            color="blue"
+                        />
+
+
+
                     </View>
 
 
@@ -97,28 +105,22 @@ const Settings = ({ navigation }) => {
                 </View>
 
 
-                <View>
-                    {/* Notifications */}
-                    <View style={[styles.settinginnerview, {
-                        flex: 1,
-                        height: '8%', alignItems: 'center',
-                        backgroundColor: '#fff', marginTop: '7%'
-                    }]}>
-                        <Icon name="notifications" size={30} color="red" />
-                        <Text style={{ marginTop: '2%', marginLeft: '-50%' }}>Notifications</Text>
 
-                        <TouchableOpacity onPress={() => setNotifications(!Notifications)}>
-                            <ToggleSwitch
-                                isOn={Notifications}
-                                onColor="green"
-                                offColor="grey"
-                                size="medium"
-                                onToggle={isOn => console.log("changed to : ", isOn)}
-
-                            />
-                        </TouchableOpacity>
-                    </View>
+                {/* Notifications */}
+                <View style={[styles.settinginnerview, {
+                    flex: 1,
+                    height: '8%', alignItems: 'center',
+                    backgroundColor: '#fff',
+                    marginTop: '7%'
+                }]}>
+                    <IconTextToggle icon="notifications" name="Notifications"
+                        itemState={Notifications}
+                        ToggleHandler={NotificationsHandler}
+                        size={30}
+                        color="red"
+                    />
                 </View>
+
 
                 {/* Privacy Policy */}
 
@@ -129,23 +131,16 @@ const Settings = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    height: '8%', alignItems: 'center',
-                    backgroundColor: '#fff', marginTop: '7%',
-                    paddingHorizontal: 5
-                }}>
-                    <Icon name="eye" size={30} color="red" />
-                    <Text style={{ marginLeft: '4%' }}> Wali</Text>
 
-                    <TouchableOpacity
-                        style={{ marginLeft: '70%', flexDirection: 'row' }}
-                        onPress={() => alert('Clicked Privacy ')}>
-                        <Text style={{ marginTop: '2%', marginLeft: '-1%' }} >Disabled</Text>
-                        <Icon style={{ marginLeft: '2%' }}
-                            name="chevron-forward" size={20} />
-                    </TouchableOpacity>
+                <View style={{ marginTop: '4%' }}>
+                    <SettingTwoName iconLeftName="eye"
+                        textFirstName="Wali"
+                        textSecondName="Disabled"
+                        iconRightName="chevron-forward"
+                        iconLeftClr="red"
+                        iconRightClr="grey"
+                        handler={LockOnExitHandler}
+                    />
                 </View>
 
 

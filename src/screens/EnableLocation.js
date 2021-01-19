@@ -13,7 +13,7 @@ const EnableLocation = ({ navigation }) => {
             <Content contentContainerStyle={{ flex: 1 }}>
 
                 <Image
-
+                    resizeMode="cover"
                     style={{
                         alignSelf: 'center', height: hp('35%'),
                     }}

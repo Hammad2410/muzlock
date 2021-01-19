@@ -14,6 +14,7 @@ const SearchScreenCardView = ({ imgurl, title, Question1, Question2, Question3,
         }}>
             <Image
                 // source={{ uri: { imgurl } }}
+                resizeMode="contain"
                 source={imgurl}
                 style={{ width: wp('50%'), height: '40%' }}
             />

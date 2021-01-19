@@ -10,7 +10,7 @@ import Logo from '../components/Logo';
 const DateOfBirth = ({ navigation }) => {
     const [date, setDate] = useState(new Date());
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
             <View style={{ justifyContent: 'center' }}>
 
                 <Logo />
@@ -47,7 +47,9 @@ const DateOfBirth = ({ navigation }) => {
 
 
             </View>
-            <View style={{ marginTop: '5%' }}>
+
+
+            <View style={{ flex: 1 }}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Gender')}
                     style={styles.continueBtn}>
@@ -56,8 +58,6 @@ const DateOfBirth = ({ navigation }) => {
             </Text>
                 </TouchableOpacity>
             </View>
-
-
 
 
 

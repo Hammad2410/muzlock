@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     continueBtn:
     {
         // marginTop: '5%',
-        marginBottom: '2%',
+
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',

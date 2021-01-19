@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     title: {
         //position: "absolute",
         alignSelf: "center",
-        fontSize: heightPercentageToDP("4%"),
+        fontSize: heightPercentageToDP("3%"),
         color: Colors.black,
         textAlign: 'center',
         paddingTop: heightPercentageToDP("5%"),
@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
         //justifyContent: 'center'
     },
     IntroBtn: {
-        flex: 1,
+        // flex: 1,
+        width: wp('35%'),
         marginBottom: 10,
         backgroundColor: Colors.button,
         alignSelf: 'center',

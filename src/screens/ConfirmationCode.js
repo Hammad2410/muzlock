@@ -18,12 +18,13 @@ const ConfirmationCode = ({ navigation }) => {
         setValue,
     });
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
             <Image
                 style={{
 
                     justifyContent: 'center', alignSelf: 'center'
                 }}
+                resizeMode="contain"
                 source={require('../assets/otpverificationpage/otp-image.png')}
 
             />
@@ -81,9 +82,10 @@ export default ConfirmationCode;
 
 const styles = StyleSheet.create({
     cell: {
-        width: 40,
+        marginHorizontal: 10,
+        width: 37,
         height: 40,
-        lineHeight: 38,
+        lineHeight: 35,
         fontSize: 24,
         borderBottomWidth: 1,
         borderColor: '#fca503',

@@ -32,7 +32,7 @@ function welcome(props) {
 
     return (
 
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
             <Swiper
                 dot={<View style={styles.dot} />}
                 activeDot={<View style={styles.activedot} />}
@@ -44,7 +44,10 @@ function welcome(props) {
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/logo.png")}
-                        style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
+                        style={{
+                            height: heightPercentageToDP('10%'),
+                            width: widthPercentageToDP("25%")
+                        }}
                     />
                     <Text style={styles.title}>MuzLock</Text>
                     <Image
@@ -90,7 +93,10 @@ function welcome(props) {
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/intro/slide-3.png")}
-                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                        style={{
+                            height: heightPercentageToDP("40%"),
+                            width: widthPercentageToDP("55%")
+                        }}
                     />
 
                     <GradientText text={"Audio/Video Calls"} />
@@ -116,13 +122,13 @@ function welcome(props) {
                 </View>
             </Swiper>
             <View style={{ flexDirection: 'row', marginVertical: 10, justifyContent: 'space-around' }}>
-                {idActive != 0 && <Button
+                {/* {idActive != 0 && <Button
                     onPress={() => onPressBack()}
                     rounded
                     block
                     style={styles.IntroBtn}>
                     <Text style={styles.IntroText}>{'Previous'}</Text>
-                </Button>}
+                </Button>} */}
                 <Button
                     onPress={() => onPressNext()}
                     rounded

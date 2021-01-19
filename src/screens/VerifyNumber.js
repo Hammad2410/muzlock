@@ -21,10 +21,11 @@ const VerifyNumber = ({ navigation }) => {
 
 
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
             <Image
+                resizeMode="contain"
                 style={{
-                    width: wp('100%'), height: hp('50%')
+                    width: wp('100%'), height: hp('45%')
                     // justifyContent: 'center', alignSelf: 'center'
                 }}
                 source={require('../assets/otpverificationpage/VerifyNumber.png')} />
@@ -38,6 +39,7 @@ const VerifyNumber = ({ navigation }) => {
 
 
             <View style={{
+                flex: 1,
                 flexDirection: 'row', marginTop: '3%',
                 alignSelf: 'center',
             }}>
@@ -117,7 +119,8 @@ const styles = StyleSheet.create({
     },
     continueBtn:
     {
-        marginTop: '5%',
+        // marginTop: '5%',
+        marginBottom: '2%',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',

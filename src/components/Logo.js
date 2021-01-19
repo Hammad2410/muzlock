@@ -9,7 +9,9 @@ const Logo = () => {
                 style={{
                     width: wp('28%'), height: hp('10%'),
                     marginTop: '5%', alignSelf: 'center',
-                }} />
+                }}
+                resizeMode="contain"
+            />
         </View>
     )
 }

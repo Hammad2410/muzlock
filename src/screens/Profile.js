@@ -46,14 +46,46 @@ const Profile = ({ navigation }) => {
         <Content >
             <View>
                 <View style={{
-                    borderRadius: 65, justifyContent: 'center', alignSelf: 'center',
-                    borderTopColor: Colors.button, borderLeftColor: Colors.grey,
-                    borderRightColor: Colors.grey, borderBottomWidth: 0,
+                    borderRadius: 65, justifyContent: 'center',
+                    alignSelf: 'center',
+                    borderTopColor: Colors.button,
+                    borderLeftColor: Colors.grey,
+                    borderRightColor: Colors.grey,
+                    borderBottomWidth: 0,
                     borderWidth: 4, marginTop: 5, padding: 3
+
                 }}>
-                    <Thumbnail style={{ padding: 5, width: wp("33%"), height: wp("33%"), borderRadius: 100, }}
-                        source={require('../assets/loginpageslider/3.jpg')} />
+                    <Thumbnail style={{
+                        padding: 5, width: wp("33%"),
+                        height: wp("33%"), borderRadius: 100,
+                    }}
+                        source={require('../assets/loginpageslider/3.jpg')}
+                    />
+
                 </View>
+                <View style={{
+                    position: 'absolute',
+                    marginLeft: '62%'
+                    , marginTop: '25%'
+                }}>
+                    <TouchableOpacity
+
+                        onPress={() => navigation.navigate('ProfileDetails')}
+                        style={{
+
+                            width: 30,
+                        }}
+                    >
+                        <Icon
+                            style={{
+                                // width: wp('100%'),
+
+                                // position: 'absolute'
+                            }}
+                            name="add-circle" size={30} color="grey" />
+                    </TouchableOpacity>
+                </View>
+
             </View>
 
             <View style={{ alignSelf: 'center', marginTop: '2%' }}>

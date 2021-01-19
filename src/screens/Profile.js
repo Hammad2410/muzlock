@@ -65,14 +65,14 @@ const Profile = ({ navigation }) => {
                 </View>
                 <View style={{
                     position: 'absolute',
-                    marginLeft: '62%'
-                    , marginTop: '25%'
+                    alignSelf: 'center',
+                    alignItems: 'flex-end',
+                    marginTop: '25%'
                 }}>
                     <TouchableOpacity
-
                         onPress={() => navigation.navigate('ProfileDetails')}
                         style={{
-
+                            marginLeft: '35%',
                             width: 30,
                         }}
                     >
@@ -101,7 +101,10 @@ const Profile = ({ navigation }) => {
                 <Text style={{ textAlign: 'center' }}>Tap to edit profile</Text>
             </View>
 
-            <View style={{ marginTop: '5%', flexDirection: 'row', justifyContent: 'space-around' }}>
+            <View style={{
+                marginTop: '5%', flexDirection: 'row',
+                justifyContent: 'space-around'
+            }}>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Settings')}>

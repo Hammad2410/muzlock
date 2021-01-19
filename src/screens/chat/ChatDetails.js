@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { Content, Thumbnail, ScrollableTab, Tab, Tabs } from 'native-base';
+import { Content, Thumbnail, ScrollableTab, Tab, Tabs, Header, Left, Right, Body } from 'native-base';
 import { GiftedChat, Bubble, } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '../../styles/colors'
@@ -42,32 +42,23 @@ const ChatDetails = ({ navigation, route }) => {
 
         <Content contentContainerStyle={{ flex: 1 }}>
 
+            <Header style={{ elevation: 0, backgroundColor: '#fff' }}>
+                <Left>
 
-
-
-            <View style={{ flexDirection: 'row', backgroundColor: '#fff' }}>
-
-                <TouchableOpacity
-                    style={{ marginHorizontal: '4%' }}
-                    onPress={() => navigation.goBack()}>
-                    <Icon name="arrow-back-outline" size={20} color="red" />
-                </TouchableOpacity>
-
-                <View style={{ flexDirection: 'row', width: '60%' }}>
+                    <TouchableOpacity
+                        // style={{ marginHorizontal: '4%' }}
+                        onPress={() => navigation.goBack()}>
+                        <Icon name="arrow-back-outline" size={20} color="red" />
+                    </TouchableOpacity>
+                </Left>
+                <Body style={{ flex: 1, flexDirection: 'row', marginLeft: '-10%' }}>
                     <Thumbnail small source={ProfileUrl} />
                     <Text style={{ marginHorizontal: '3%', marginVertical: '2%' }}>
 
                         {JSON.stringify(ProfileName)}
                     </Text>
-
-
-                </View>
-
-                <View style={{
-                    marginVertical: '2%',
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly'
-                }}>
+                </Body>
+                <Right>
                     <TouchableOpacity style={{ marginHorizontal: '4%' }}>
                         <Icon name="call" size={20} color="red" />
                     </TouchableOpacity>
@@ -79,10 +70,11 @@ const ChatDetails = ({ navigation, route }) => {
                     <TouchableOpacity>
                         <Icon name="alert-circle" size={20} color="red" />
                     </TouchableOpacity>
-                </View>
+                </Right>
+            </Header>
 
 
-            </View>
+
 
 
             <Tabs
@@ -98,6 +90,14 @@ const ChatDetails = ({ navigation, route }) => {
                 <Tab heading={"Chats "} {...tabStyles}>
 
                     <GiftedChat
+
+                        placeholder="Message"
+                        messages={messages}
+                        onSend={messages => onSend(messages)}
+                        user={{
+                            _id: 1,
+                        }}
+
                         renderBubble={props => {
                             return (
                                 <Bubble
@@ -125,27 +125,7 @@ const ChatDetails = ({ navigation, route }) => {
                             );
                         }}
 
-                        // renderSend={(props) => (
-                        //     <View style={{ flexDirection: 'row', alignItems: 'center', height: 60 }}>
-                        //         <Icon icon="camera" iconColor="red" size={20}
-                        //             style={{ marginHorizontal: 5 }}
-                        //         // onPress={() => alert('Camera')} 
-                        //         />
 
-                        //         <View >
-                        //             <Icon name="ios-send" size={24} color="#ffffff" />
-                        //         </View>
-
-                        //     </View>
-                        // )}
-                        // alwaysShowSend={true}
-                        // isTyping={true}
-                        placeholder="Message"
-                        messages={messages}
-                        onSend={messages => onSend(messages)}
-                        user={{
-                            _id: 1,
-                        }}
                     />
 
                 </Tab>

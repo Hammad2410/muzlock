@@ -102,6 +102,7 @@ const mainChat = ({ navigation }) => {
                     renderItem={({ item, index }) => (
                         <View style={{
                             width: '100%',
+                            marginHorizontal: 5,
                             marginVertical: '5%',
                             // margin: 10,
                             // justifyContent: 'center',

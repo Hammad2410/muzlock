@@ -13,7 +13,7 @@ const Filter = ({ navigation }) => {
 
         <Container>
             <ScrollView>
-                <Content contentContainerStyle={{ flex: 1, }}>
+                <Content contentContainerStyle={{ flex: 1, paddingBottom: 10 }}>
 
                     <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
                         <Left style={{ flex: 1 }}>

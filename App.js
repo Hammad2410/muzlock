@@ -20,7 +20,7 @@ import Navigator from './src/navigator';
 const App = () => {
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle='dark-content' backgroundColor={"#FFF"} />
       <SafeAreaView style={{ flex: 1 }}>
         <NavigationContainer>
           <Navigator />

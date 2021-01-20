@@ -8,7 +8,7 @@ export default function gradientText(props) {
     return (
 
         <MaskedView
-            style={{ height: 20, flexDirection: 'row' }}
+            style={{ height: 20, flexDirection: 'row', height: 30 }}
             maskElement={
                 <View
                     style={{

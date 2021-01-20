@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
-import { Content, Header, Left, Body, Right, Thumbnail, Icon } from 'native-base';
+import { Content, Header, Left, Body, Right, Thumbnail, Icon, Container } from 'native-base';
 
 const mainChat = ({ navigation }) => {
     const [users, setUsers] = useState([
@@ -52,7 +52,7 @@ const mainChat = ({ navigation }) => {
 
 
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Container style={{ flex: 1 }}>
             <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
                 <Left style={{ flex: 1 }} />
                 <Body style={{ flex: 1 }}>
@@ -73,7 +73,7 @@ const mainChat = ({ navigation }) => {
             }}>
 
                 <FlatList
-
+                    showsHorizontalScrollIndicator={false}
                     data={users}
                     keyExtractor={(item, index) => index.toString()}
                     horizontal
@@ -100,21 +100,22 @@ const mainChat = ({ navigation }) => {
                     data={chat}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item, index }) => (
-                        <View style={{
-                            width: '100%',
-                            marginHorizontal: 5,
-                            marginVertical: '5%',
-                            // margin: 10,
-                            // justifyContent: 'center',
-                            flexDirection: 'row', flex: 1,
-                            // width: '100%'
-                        }}>
-                            <TouchableOpacity
-                                onPress={() => navigation.navigate('ChatDetails', { ProfileUrl: item.url, ProfileName: item.name, })}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('ChatDetails', { ProfileUrl: item.url, ProfileName: item.name, })}
+                            style={{
+                                width: '100%',
+                                marginHorizontal: 5,
+                                marginVertical: '5%',
+                                // margin: 10,
+                                // justifyContent: 'center',
+                                flexDirection: 'row', flex: 1,
+                                // width: '100%'
+                            }}>
+                            <View>
                                 <Thumbnail
 
                                     large source={item.url} />
-                            </TouchableOpacity>
+                            </View>
                             <View
                                 style={{
                                     marginLeft: '4%',
@@ -147,12 +148,12 @@ const mainChat = ({ navigation }) => {
                                 }}>Say Hi</Text>
                             </View>
 
-                        </View>
+                        </TouchableOpacity>
                     )
                     }
                 />
             </View>
-        </Content >
+        </Container >
     )
 }
 export default mainChat;

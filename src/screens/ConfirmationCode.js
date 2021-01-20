@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, ImageBackground, StyleSheet, } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Content } from 'native-base';
+import { Content, Container } from 'native-base';
 import {
     CodeField,
     Cursor,
@@ -18,64 +18,66 @@ const ConfirmationCode = ({ navigation }) => {
         setValue,
     });
     return (
-        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
-            <Image
-                style={{
+        <Container style={{ flex: 1, backgroundColor: '#fff' }} >
+            <Content contentContainerStyle={{ backgroundColor: '#fff', paddingHorizontal: 10 }}>
+                <Image
+                    style={{
+                        width: wp('60%'), height: hp('50%'),
+                        justifyContent: 'center', alignSelf: 'center'
+                    }}
+                    resizeMode="contain"
+                    source={require('../assets/otpverificationpage/otp-image.png')}
 
-                    justifyContent: 'center', alignSelf: 'center'
-                }}
-                resizeMode="contain"
-                source={require('../assets/otpverificationpage/otp-image.png')}
-
-            />
-            <View style={{
-                flexDirection: 'row', justifyContent: 'center',
-                marginTop: '2%'
-            }}>
-                <Text style={{ fontSize: 14 }}>Enter the code sent to</Text>
-                <Text style={{
-                    color: 'red', fontWeight: 'bold',
-                    fontSize: 15
-                }}>  +44xxxxxxx</Text>
-            </View>
-
-
-            <View style={{ marginTop: '2%' }}>
-                <CodeField
-
-                    ref={ref}
-                    {...props}
-                    value={value}
-                    onChangeText={setValue}
-                    onEndEditing={() => navigation.navigate('DateOfBirth')}
-
-
-                    cellCount={CELL_COUNT}
-                    rootStyle={styles.codeFieldRoot}
-                    keyboardType="number-pad"
-                    textContentType="oneTimeCode"
-                    renderCell={({ index, symbol, isFocused }) => (
-                        <Text
-                            key={index}
-                            style={[styles.cell, isFocused && styles.focusCell]}
-                            onLayout={getCellOnLayoutHandler(index)}>
-                            {symbol || (isFocused ? <Cursor /> : null)}
-                        </Text>
-                    )}
                 />
+                <View style={{
+                    flexDirection: 'row', justifyContent: 'center',
+                    marginTop: '2%'
+                }}>
+                    <Text style={{ fontSize: 14 }}>Enter the code sent to</Text>
+                    <Text style={{
+                        color: 'red', fontWeight: 'bold',
+                        fontSize: 15
+                    }}>  +44xxxxxxx</Text>
+                </View>
 
-            </View>
+
+                <View style={{ marginTop: '2%' }}>
+                    <CodeField
+
+                        ref={ref}
+                        {...props}
+                        value={value}
+                        onChangeText={setValue}
+                        onEndEditing={() => navigation.navigate('DateOfBirth')}
 
 
-            <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: '6%' }}>
-                <Text>Didn't recieved the code ?</Text>
-                <TouchableOpacity><Text style={{ color: '#21eda2' }}> RESEND</Text></TouchableOpacity>
-            </View>
+                        cellCount={CELL_COUNT}
+                        rootStyle={styles.codeFieldRoot}
+                        keyboardType="number-pad"
+                        textContentType="oneTimeCode"
+                        renderCell={({ index, symbol, isFocused }) => (
+                            <Text
+                                key={index}
+                                style={[styles.cell, isFocused && styles.focusCell]}
+                                onLayout={getCellOnLayoutHandler(index)}>
+                                {symbol || (isFocused ? <Cursor /> : null)}
+                            </Text>
+                        )}
+                    />
+
+                </View>
+
+
+                <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: '6%' }}>
+                    <Text>Didn't recieved the code ?</Text>
+                    <TouchableOpacity><Text style={{ color: '#21eda2' }}> RESEND</Text></TouchableOpacity>
+                </View>
 
 
 
 
-        </Content >
+            </Content >
+        </Container>
     )
 }
 export default ConfirmationCode;

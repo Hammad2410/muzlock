@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { Content, Thumbnail, ScrollableTab, Tab, Tabs, Header, Left, Right, Body } from 'native-base';
-import { GiftedChat, Bubble, } from 'react-native-gifted-chat';
+import { Content, Thumbnail, ScrollableTab, Tab, Tabs, Header, Left, Right, Body, Container } from 'native-base';
+import { GiftedChat, Bubble, InputToolbar } from 'react-native-gifted-chat';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '../../styles/colors'
 import styles from './styles';
@@ -40,7 +40,7 @@ const ChatDetails = ({ navigation, route }) => {
 
     return (
 
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Container style={{ flex: 1 }}>
 
             <Header style={{ elevation: 0, backgroundColor: '#fff' }}>
                 <Left>
@@ -90,7 +90,7 @@ const ChatDetails = ({ navigation, route }) => {
                 <Tab heading={"Chats "} {...tabStyles}>
 
                     <GiftedChat
-
+                        inverted={false}
                         placeholder="Message"
                         messages={messages}
                         onSend={messages => onSend(messages)}
@@ -124,6 +124,30 @@ const ChatDetails = ({ navigation, route }) => {
                                 />
                             );
                         }}
+                        renderSend={(props) =>
+                            <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                                <TouchableOpacity style={{ marginHorizontal: '4%' }}>
+                                    <Icon name="camera" size={30} color="red" />
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={{ marginHorizontal: 0 }}>
+                                    <Icon name="mic-outline" size={30} color="red" />
+                                </TouchableOpacity>
+
+                            </View>
+
+                        }
+
+                    // renderInputToolbar={props => {
+                    //     return (
+                    //         <View style={{ flexDirection: 'row', paddingHorizontal: 20 }}>
+                    //             <TouchableOpacity >
+                    //                 <Text> this</Text>
+                    //             </TouchableOpacity>
+                    //             <InputToolbar {...props} />
+                    //         </View>
+                    //     )
+                    // }}
 
 
                     />
@@ -145,7 +169,7 @@ const ChatDetails = ({ navigation, route }) => {
             </Tabs>
 
 
-        </Content>
+        </Container>
     )
 }
 export default ChatDetails;

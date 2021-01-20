@@ -15,7 +15,9 @@ const SuccessStories = ({ navigation }) => {
                         <Icon name="chevron-back" size={30} />
                     </TouchableOpacity>
 
-                    <Image source={require('../assets/logo.png')}
+                    <Image
+                        resizeMode={'contain'}
+                        source={require('../assets/logo.png')}
                         style={{
                             width: 55, height: 37,
                             marginLeft: '40%',
@@ -27,7 +29,7 @@ const SuccessStories = ({ navigation }) => {
 
                 </View>
                 <View>
-                    <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 15 }}> Success Stories </Text>
+                    <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 15, alignSelf: 'center' }}> Success Stories </Text>
                 </View>
 
                 <View style={{ marginTop: '2%', borderWidth: 1 }}>

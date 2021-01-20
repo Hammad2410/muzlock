@@ -50,9 +50,10 @@ export const SettingTwoName = ({ iconLeftName, textFirstName,
             // height: '8%', 
             // alignItems: 'center',
             backgroundColor: '#fff',
-            // marginTop: '7%'
+            // marginTop: '7%',
+            paddingHorizontal: 10
         }}>
-            <Icon name={iconLeftName} size={30} color={iconLeftClr} />
+            <Icon name={iconLeftName} size={30} color={iconLeftClr} style={{ alignSelf: 'center' }} />
 
             <View style={{
 

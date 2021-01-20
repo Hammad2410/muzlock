@@ -98,7 +98,7 @@ const ProfileDetails = ({ navigation }) => {
                     color="red"
                 />
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="videocam"
                         textName="Video Selfie Verification"
@@ -106,7 +106,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="menu"
                         textName="Basic Info"
@@ -115,7 +115,7 @@ const ProfileDetails = ({ navigation }) => {
                 </View>
 
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="help"
                         textName="Education and Carrier"
@@ -123,7 +123,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="flag"
                         textName="Ethnicity"
@@ -133,7 +133,7 @@ const ProfileDetails = ({ navigation }) => {
 
 
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="chatbox"
                         textName="Language"
@@ -142,7 +142,7 @@ const ProfileDetails = ({ navigation }) => {
                 </View>
 
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="help"
                         textName="Life Style"
@@ -150,7 +150,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="help"
                         textName="Apearance"
@@ -158,7 +158,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="person"
                         textName="Marital Status"
@@ -166,7 +166,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="happy"
                         textName="Children"
@@ -174,7 +174,7 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeftColor="red" iconRightColor="grey" />
                 </View>
 
-                <View style={{ marginTop: '4%' }}>
+                <View style={{ marginTop: '5%' }}>
                     <SettingComponent
                         iconLeft="help"
                         textName="Marriage Plans"

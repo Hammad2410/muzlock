@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Content, Thumbnail, Container } from 'native-base';
+import GradientText from '../components/GradientText';
 import { btn } from './globalStyles';
 const SelfieVerification = ({ navigation }) => {
     const [image, setImage] = useState('');
@@ -15,12 +16,12 @@ const SelfieVerification = ({ navigation }) => {
                     style={styles.img}
                     source={require('../assets/selfieverification/selfie-verification.jpg')} />
 
-                <Text style={styles.selfieVerifText}>Selfie Verification </Text>
+                <GradientText text={"Selfie Verification"} />
 
-                <Text style={styles.needSelfieVerifText}>We need a selfie verification </Text>
-                <Text style={styles.onlyForUsText}> This is only for us </Text>
+                <Text style={styles.needSelfieVerifText}>We need a selfie verification This is only for us We will not make it public</Text>
+                {/* <Text style={styles.onlyForUsText}> </Text>
 
-                <Text style={styles.notMakePublicText}>We will not make it public</Text>
+                <Text style={styles.notMakePublicText}</Text> */}
 
 
                 <TouchableOpacity style={styles.camerBtn}>
@@ -36,7 +37,7 @@ const SelfieVerification = ({ navigation }) => {
             </Content>
             <TouchableOpacity
                 onPress={() => navigation.navigate('EnableLocation')}
-                style={btn.bottomBtn}>
+                style={[btn.bottomBtn, { marginVertical: 35 }]}>
 
                 <Text style={{ color: '#fff', fontSize: 15 }}>
                     Next
@@ -50,10 +51,11 @@ export default SelfieVerification;
 const styles = StyleSheet.create({
     img:
     {
-        // height: hp('40%'),
-        // width: wp('100%'),
+        height: hp('40%'),
+        width: wp('100%'),
         justifyContent: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        backgroundColor: '#E1E1E1'
     }
     , selfieVerifText:
     {
@@ -64,8 +66,9 @@ const styles = StyleSheet.create({
     },
     needSelfieVerifText:
     {
-        width: wp('50%'), marginTop: '1%', textAlign: 'center',
-        fontSize: 15, justifyContent: 'center', alignSelf: 'center'
+        width: wp('75%'), marginTop: '1%', textAlign: 'center',
+        fontSize: 12, justifyContent: 'center', alignSelf: 'center',
+        marginVertical: 10
     },
     onlyForUsText:
     {
@@ -83,7 +86,8 @@ const styles = StyleSheet.create({
     {
         marginTop: '5%',
         justifyContent: 'center', alignSelf: 'center'
-    }, nextBtn:
+    },
+    nextBtn:
     {
         marginTop: '3%',
         justifyContent: 'center',

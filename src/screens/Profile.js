@@ -176,9 +176,12 @@ const Profile = ({ navigation }) => {
             <View style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                marginTop: '2%'
+                marginTop: '2%',
+                width: wp('75%'),
+                alignSelf: 'center'
             }}>
                 <FlatList
+                    showsHorizontalScrollIndicator={false}
                     data={images}
                     horizontal={true}
                     keyExtractor={(item, index) => index.toString()}
@@ -186,8 +189,8 @@ const Profile = ({ navigation }) => {
                         <TouchableOpacity
                             onPress={() => navigation.navigate('Premium')}
                             style={{ margin: 10, marginHorizontal: 10 }}>
-                            <Image style={{
-                                width: wp('20%'), height: hp('15%')
+                            <Image resizeMode={'contain'} style={{
+                                width: wp('20%'), height: hp('20%')
                             }}
                                 source={item.url}
                             />

@@ -46,14 +46,46 @@ const Profile = ({ navigation }) => {
         <Content >
             <View>
                 <View style={{
-                    borderRadius: 65, justifyContent: 'center', alignSelf: 'center',
-                    borderTopColor: Colors.button, borderLeftColor: Colors.grey,
-                    borderRightColor: Colors.grey, borderBottomWidth: 0,
+                    borderRadius: 65, justifyContent: 'center',
+                    alignSelf: 'center',
+                    borderTopColor: Colors.button,
+                    borderLeftColor: Colors.grey,
+                    borderRightColor: Colors.grey,
+                    borderBottomWidth: 0,
                     borderWidth: 4, marginTop: 5, padding: 3
+
                 }}>
-                    <Thumbnail style={{ padding: 5, width: wp("33%"), height: wp("33%"), borderRadius: 100, }}
-                        source={require('../assets/loginpageslider/3.jpg')} />
+                    <Thumbnail style={{
+                        padding: 5, width: wp("33%"),
+                        height: wp("33%"), borderRadius: 100,
+                    }}
+                        source={require('../assets/loginpageslider/3.jpg')}
+                    />
+
                 </View>
+                <View style={{
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    alignItems: 'flex-end',
+                    marginTop: '25%'
+                }}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('ProfileDetails')}
+                        style={{
+                            marginLeft: '35%',
+                            width: 30,
+                        }}
+                    >
+                        <Icon
+                            style={{
+                                // width: wp('100%'),
+
+                                // position: 'absolute'
+                            }}
+                            name="add-circle" size={30} color="grey" />
+                    </TouchableOpacity>
+                </View>
+
             </View>
 
             <View style={{ alignSelf: 'center', marginTop: '2%' }}>
@@ -69,7 +101,10 @@ const Profile = ({ navigation }) => {
                 <Text style={{ textAlign: 'center' }}>Tap to edit profile</Text>
             </View>
 
-            <View style={{ marginTop: '5%', flexDirection: 'row', justifyContent: 'space-around' }}>
+            <View style={{
+                marginTop: '5%', flexDirection: 'row',
+                justifyContent: 'space-around'
+            }}>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity
                         onPress={() => navigation.navigate('Settings')}>
@@ -108,7 +143,7 @@ const Profile = ({ navigation }) => {
             }}>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <TouchableOpacity  >
+                    <TouchableOpacity onPress={() => navigation.navigate('SearchForAnswers')} >
                         <Thumbnail source={require('../assets/settingpage/settingicon/help.png')} />
                     </TouchableOpacity>
                     <Text style={{ marginTop: '5%' }}>Help Center</Text>
@@ -116,7 +151,7 @@ const Profile = ({ navigation }) => {
                 </View>
 
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <TouchableOpacity  >
+                    <TouchableOpacity onPress={() => navigation.navigate('SuccessStories')} >
                         <Thumbnail source={require('../assets/settingpage/settingicon/success-stories.png')} />
                     </TouchableOpacity>
                     <Text style={{ marginTop: '5%' }}>Success Stories</Text>
@@ -150,7 +185,7 @@ const Profile = ({ navigation }) => {
                     renderItem={({ item, index }) => (
                         <TouchableOpacity
                             onPress={() => navigation.navigate('Premium')}
-                            style={{ margin: 10 }}>
+                            style={{ margin: 10, marginHorizontal: 10 }}>
                             <Image style={{
                                 width: wp('20%'), height: hp('15%')
                             }}

@@ -23,6 +23,10 @@ import Shield from '../screens/Shield';
 import Premium from '../screens/Premium';
 import Chat from '../screens/chat';
 import mainChat from '../screens/chat';
+import ChatDetails from '../screens/chat/ChatDetails';
+import SearchForAnswer from '../screens/SearchForAnswer';
+import SuccessStories from '../screens/SuccessStories';
+import ProfileDetails from '../screens/ProfileDetailsAddPhotosAndOthers';
 
 
 const Stack = createStackNavigator();
@@ -105,7 +109,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="tab">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -149,6 +153,24 @@ const main = () => {
                     options={{ header: () => null }}
                 />
                 <Stack.Screen component={Profile} name="Profile"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={ChatDetails} name="ChatDetails"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={SearchForAnswer}
+                    name="SearchForAnswers"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={SuccessStories}
+                    name="SuccessStories"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={ProfileDetails}
+                    name="ProfileDetails"
                     options={{ header: () => null }}
                 />
 

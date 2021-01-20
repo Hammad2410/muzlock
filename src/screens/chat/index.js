@@ -95,22 +95,26 @@ const mainChat = ({ navigation }) => {
                 fontWeight: 'bold', alignSelf: 'center',
                 fontSize: 24, marginVertical: 10
             }}>Yours Chats</Text>
-            <View style={{ flexDirection: 'row', flex: 1, }}>
+            <View style={{ flexDirection: 'row', flex: 1, paddingHorizontal: 8 }}>
                 <FlatList
                     data={chat}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item, index }) => (
                         <View style={{
                             width: '100%',
+                            marginHorizontal: 5,
                             marginVertical: '5%',
                             // margin: 10,
                             // justifyContent: 'center',
                             flexDirection: 'row', flex: 1,
                             // width: '100%'
                         }}>
-                            <Thumbnail
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate('ChatDetails', { ProfileUrl: item.url, ProfileName: item.name, })}>
+                                <Thumbnail
 
-                                large source={item.url} />
+                                    large source={item.url} />
+                            </TouchableOpacity>
                             <View
                                 style={{
                                     marginLeft: '4%',

@@ -4,7 +4,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Content } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Header, Left, Right, Body, Thumbnail, Button, Title, Tab, Tabs, ScrollableTab } from 'native-base';
+import {
+    Header, Left, Right, Body, Thumbnail, Button,
+    Title, Tab, Tabs, ScrollableTab
+} from 'native-base';
 import { Colors } from '../../styles/colors';
 import GradientText from '../../components/GradientText';
 import styles from './styles';
@@ -23,7 +26,8 @@ const exploreScreen = ({ navigation }) => {
             <Header hasTabs style={{ backgroundColor: 'transparent', elevation: 0 }}>
                 <Left style={{ flex: 1 }} />
                 <Body style={{ flex: 1 }}>
-                    <Thumbnail square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                    <Thumbnail
+                        square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
                 </Body>
                 <Right style={{ flex: 1 }} />
             </Header>
@@ -34,7 +38,10 @@ const exploreScreen = ({ navigation }) => {
             <Tabs renderTabBar={() => <ScrollableTab />} tabBarUnderlineStyle={{ height: 2, backgroundColor: Colors.button }} tabContainerStyle={{ backgroundColor: Colors.button, elevation: 0 }}>
                 <Tab heading={"VISITED YOU"} {...tabStyles}>
                     <View style={{ alignItems: 'center' }}>
-                        <Text style={{ fontWeight: 'bold', fontSize: 24, marginVertical: 10 }}>
+                        <Text style={{
+                            fontWeight: 'bold',
+                            fontSize: 24, marginVertical: 10
+                        }}>
                             Visited You
                         </Text>
                         <Text style={{ marginVertical: 10, textAlign: 'center' }}>

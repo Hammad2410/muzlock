@@ -5,24 +5,31 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-const SettingComponent = ({ iconLeft, textName, iconRight, iconLeftColor, iconRightColor }) => {
+const SettingComponent = ({ iconLeft, textName, iconRight,
+    iconLeftColor, iconRightColor }) => {
 
     return (
         <View style={{
-            padding: 7,
+            height: 40,
+            // padding: 7,
             // backgroundColor: 'orange',
             backgroundColor: '#fff',
             flexDirection: 'row',
             width: wp('100%'),
-            paddingHorizontal: 5
+            paddingHorizontal: 10
         }}>
-            <Icon name={iconLeft} size={30} color={iconLeftColor} />
+            <Icon
+                style={{ alignSelf: 'center' }}
+                name={iconLeft} size={30} color={iconLeftColor} />
 
             <View style={{ flexDirection: 'row', flex: 1, }}>
                 <Text style={{ marginLeft: '2%', alignSelf: 'center' }}> {textName}</Text>
             </View>
             <TouchableOpacity>
-                <Icon style={{ alignSelf: 'center' }}
+                <Icon style={{
+                    paddingVertical: 8,
+                    alignSelf: 'center',
+                }}
                     name={iconRight} size={20} color={iconRightColor} />
             </TouchableOpacity>
 
@@ -31,7 +38,9 @@ const SettingComponent = ({ iconLeft, textName, iconRight, iconLeftColor, iconRi
 }
 export default SettingComponent;
 
-export const SettingTwoName = ({ iconLeftName, textFirstName, textSecondName, iconRightName, iconLeftClr, iconRightClr, LanguageHandler }) => {
+export const SettingTwoName = ({ iconLeftName, textFirstName,
+    textSecondName, iconRightName, iconLeftClr, iconRightClr,
+    handler }) => {
     return (
         <View style={{
             // flex: 1,
@@ -62,7 +71,7 @@ export const SettingTwoName = ({ iconLeftName, textFirstName, textSecondName, ic
             <Text >{textSecondName}</Text>
             <TouchableOpacity
                 style={{ alignSelf: 'center' }}
-                onPress={() => LanguageHandler()}>
+                onPress={() => handler()}>
 
                 <Icon
                     name={iconRightName} size={20} color={iconRightClr} />

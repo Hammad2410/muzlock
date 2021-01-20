@@ -2,43 +2,49 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Image, TextInput, ImageBackground, TouchableOpacity, StyleSheet, FlatList, Modal, TouchableWithoutFeedback } from 'react-native';
 
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Content } from 'native-base';
+import { Content, Container } from 'native-base';
 import Logo from '../components/Logo';
 import { Colors } from '../styles/colors'
 const Gender = ({ navigation }) => {
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
-            <View style={{ justifyContent: 'center' }}>
-                <Logo />
-                <Text style={{ marginTop: '5%', fontSize: 18, alignSelf: 'center' }}>What's Your Gender</Text>
-                <Image style={{ marginTop: '5%', width: wp('28%'), height: hp('15%'), alignSelf: 'center' }}
-                    source={require('../assets/Birthdayormalefemalepage/sex.png')} />
+        <Container>
+            <Content contentContainerStyle={{ flex: 1 }}>
+                <View style={{ justifyContent: 'center' }}>
+                    <Logo />
+                    <Text style={{ marginTop: '5%', fontSize: 18, alignSelf: 'center' }}>What's Your Gender</Text>
+                    <Image
+                        resizeMode="contain"
+                        style={{ marginTop: '5%', width: wp('28%'), height: hp('15%'), alignSelf: 'center' }}
+                        source={require('../assets/Birthdayormalefemalepage/sex.png')} />
 
-                <TouchableOpacity style={styles.genderBtn}>
-                    <Text style={styles.genderText}>
-                        Male
+                    <TouchableOpacity style={styles.genderBtn}>
+                        <Text style={styles.genderText}>
+                            Male
                 </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.genderBtn}>
-                    <Text style={styles.genderText}>
-                        Female
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.genderBtn}>
+                        <Text style={styles.genderText}>
+                            Female
                 </Text>
-                </TouchableOpacity>
+                    </TouchableOpacity>
 
 
-                <TouchableOpacity
-                    onPress={() => navigation.navigate('SelfieVerification')}
-                    style={styles.continueBtn}>
 
-                    <Text style={{ color: '#fff', fontSize: 15 }}>
-                        Continue
+
+
+                </View>
+
+            </Content>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('SelfieVerification')}
+                style={styles.continueBtn}>
+
+                <Text style={{ color: '#fff', fontSize: 15 }}>
+                    Continue
              </Text>
-                </TouchableOpacity>
+            </TouchableOpacity>
+        </Container>
 
-
-            </View>
-
-        </Content>
     )
 }
 export default Gender;
@@ -46,8 +52,8 @@ export default Gender;
 const styles = StyleSheet.create({
     genderBtn:
     {
-        width: wp('60%'),
-        height: 40,
+        width: wp('70%'),
+        height: 45,
         alignSelf: 'center',
         borderWidth: 1,
         justifyContent: 'center',
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
     },
     continueBtn:
     {
-        marginTop: '10%',
+        marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',

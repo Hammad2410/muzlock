@@ -21,10 +21,11 @@ const VerifyNumber = ({ navigation }) => {
 
 
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
             <Image
+                resizeMode="contain"
                 style={{
-                    width: wp('100%'), height: hp('50%')
+                    width: wp('100%'), height: hp('45%')
                     // justifyContent: 'center', alignSelf: 'center'
                 }}
                 source={require('../assets/otpverificationpage/VerifyNumber.png')} />
@@ -38,6 +39,7 @@ const VerifyNumber = ({ navigation }) => {
 
 
             <View style={{
+                flex: 1,
                 flexDirection: 'row', marginTop: '3%',
                 alignSelf: 'center',
             }}>
@@ -86,7 +88,7 @@ const VerifyNumber = ({ navigation }) => {
 
             <TouchableOpacity
                 onPress={() => navigation.navigate('ConfirmationCode')}
-                style={styles.continueBtn}>
+                style={[styles.continueBtn, { marginBottom: 10 }]}>
 
                 <Text style={{ color: '#fff', fontSize: 15 }}>
                     Continue
@@ -117,7 +119,8 @@ const styles = StyleSheet.create({
     },
     continueBtn:
     {
-        marginTop: '5%',
+        // marginTop: '5%',
+
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',

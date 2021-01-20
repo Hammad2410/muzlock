@@ -3,30 +3,37 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-import { Content, Thumbnail } from 'native-base';
+import { Content, Thumbnail, Container } from 'native-base';
 import { btn } from './globalStyles';
 const SelfieVerification = ({ navigation }) => {
     const [image, setImage] = useState('');
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
-            <Image
-                style={styles.img}
-                source={require('../assets/selfieverification/selfie-verification.jpg')} />
-
-            <Text style={styles.selfieVerifText}>Selfie Verification </Text>
-
-            <Text style={styles.needSelfieVerifText}>We need a selfie verification </Text>
-            <Text style={styles.onlyForUsText}> This is only for us </Text>
-
-            <Text style={styles.notMakePublicText}>We will not make it public</Text>
-
-
-            <TouchableOpacity style={styles.camerBtn}>
+        <Container>
+            <Content contentContainerStyle={{ flex: 1 }}>
                 <Image
-                    style={{ alignContent: 'center', width: wp('50%'), height: hp('25%') }}
-                    source={require('../assets/selfieverification/photo-camera.png')} />
-            </TouchableOpacity>
+                    resizeMode='contain'
+                    style={styles.img}
+                    source={require('../assets/selfieverification/selfie-verification.jpg')} />
 
+                <Text style={styles.selfieVerifText}>Selfie Verification </Text>
+
+                <Text style={styles.needSelfieVerifText}>We need a selfie verification </Text>
+                <Text style={styles.onlyForUsText}> This is only for us </Text>
+
+                <Text style={styles.notMakePublicText}>We will not make it public</Text>
+
+
+                <TouchableOpacity style={styles.camerBtn}>
+                    <Image
+                        resizeMode="contain"
+                        style={{ alignContent: 'center', width: wp('50%'), height: hp('25%') }}
+                        source={require('../assets/selfieverification/photo-camera.png')} />
+                </TouchableOpacity>
+
+
+
+
+            </Content>
             <TouchableOpacity
                 onPress={() => navigation.navigate('EnableLocation')}
                 style={btn.bottomBtn}>
@@ -35,9 +42,7 @@ const SelfieVerification = ({ navigation }) => {
                     Next
              </Text>
             </TouchableOpacity>
-
-
-        </Content>
+        </Container>
     )
 }
 export default SelfieVerification;
@@ -45,8 +50,8 @@ export default SelfieVerification;
 const styles = StyleSheet.create({
     img:
     {
-        height: hp('40%'),
-        width: wp('100%'),
+        // height: hp('40%'),
+        // width: wp('100%'),
         justifyContent: 'center',
         alignSelf: 'center'
     }

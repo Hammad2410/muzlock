@@ -21,7 +21,8 @@ const Gender = ({ navigation }) => {
                         style={{ marginTop: '5%', width: wp('28%'), height: hp('15%'), alignSelf: 'center' }}
                         source={require('../assets/Birthdayormalefemalepage/sex.png')} />
 
-                    <TouchableOpacity onPress={() => setGender('male')} style={[styles.genderBtn, { backgroundColor: gender == "male" ? '#8AC9FE' : '#e7e8e3', }]}>
+                    <TouchableOpacity onPress={() => setGender('male')}
+                        style={[styles.genderBtn, { backgroundColor: gender == "male" ? '#8AC9FE' : '#e7e8e3', }]}>
                         <Text style={[styles.genderText, { color: gender == 'male' ? "#FD4755" : 'red' }]}>
                             Male
                 </Text>

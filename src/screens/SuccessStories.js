@@ -7,7 +7,7 @@ import SuccessStory from '../components/SuccessStory';
 const SuccessStories = ({ navigation }) => {
     return (
         <ScrollView>
-            <Content contentContainerStyle={{ flex: 1 }}>
+            <Content contentContainerStyle={{ flex: 1, marginBottom: 15 }}>
 
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity onPress={() => navigation.goBack()}
@@ -20,9 +20,9 @@ const SuccessStories = ({ navigation }) => {
                         source={require('../assets/logo.png')}
                         style={{
                             width: 55, height: 37,
-                            marginLeft: '40%',
+                            marginLeft: '35%',
                             //  justifyContent: 'center',
-                            // alignSelf: 'center',
+                            alignSelf: 'center',
                             justifyContent: 'center'
                             // marginLeft: '30%'
                         }} />

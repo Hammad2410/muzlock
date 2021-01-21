@@ -7,6 +7,7 @@ import styles from './welcome/styles';
 import { Colors } from '../styles/colors'
 import DatePicker from 'react-native-date-picker'
 import Logo from '../components/Logo';
+import GradientText from '../components/GradientText';
 const DateOfBirth = ({ navigation }) => {
     const [date, setDate] = useState(new Date());
     return (
@@ -18,22 +19,26 @@ const DateOfBirth = ({ navigation }) => {
                     {/* <Image source={require('../assets/logo.png')}
                     style={{ width: wp('25%'), height: hp('10%'), marginTop: '5%', alignSelf: 'center', }} /> */}
 
-                    <Text style={{
+                    {/* <Text style={{
                         justifyContent: 'center', alignSelf: 'center', marginTop: '5%',
                         fontSize: 18
-                    }}>What's Your Date Of Birth</Text>
+                    }}>What's Your Date Of Birth</Text> */}
+                    <GradientText text={"What's Your Date Of Birth"} />
                     <Text style={{
-                        width: wp('50%'), marginLeft: '6%',
+                        width: wp('50%'),
                         justifyContent: 'center', alignSelf: 'center',
-                        fontSize: 15
-                    }}>To find your perfect match </Text>
-                    <Text style={{
+                        fontSize: 12,
+                        textAlign: 'center'
+                    }}>To find your perfect match you must be atleast 18 years old</Text>
+                    {/* <Text style={{
                         marginLeft: '-2%',
                         width: wp('45%'), justifyContent: 'center',
-                        alignSelf: 'center'
-                    }}>you must be atleast 18 years old</Text>
+                        alignSelf: 'center',
+                        textAlign: 'center',
+                        fontSize: 12,
+                    }}>you must be atleast 18 years old</Text> */}
 
-                    <Image style={{ width: wp('25%'), height: hp('15%'), alignSelf: 'center' }}
+                    <Image resizeMode="contain" style={{ width: wp('25%'), height: hp('15%'), alignSelf: 'center', marginVertical: 25 }}
                         source={require('../assets/Birthdayormalefemalepage/birthday.png')} />
 
                     <DatePicker
@@ -53,7 +58,7 @@ const DateOfBirth = ({ navigation }) => {
 
 
             </Content>
-            <View style={{ marginTop: '5%' }}>
+            <View style={{ marginVertical: '10%' }}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Gender')}
                     style={[styles.continueBtn, { marginBottom: 10 }]}>

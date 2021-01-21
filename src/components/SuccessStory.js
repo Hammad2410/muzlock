@@ -14,7 +14,7 @@ const SuccessStory = () => {
             justifyContent: 'center',
             borderRadius: 15,
             alignSelf: 'center',
-            paddingBottom: 10
+            paddingHorizontal: 10
             // , backgroundColor: 'red'
         }}>
             <Image
@@ -36,7 +36,7 @@ const SuccessStory = () => {
             <Text style={{ alignSelf: 'center', fontWeight: 'bold', textAlign: 'center', width: wp('48%'), marginTop: '2%' }}>Excited news about arrival this couple</Text>
             <Text style={{
                 // marginHorizontal: '5%',
-                width: wp('90%')
+
             }}>Lorem ipsum is simply dummy text of
                 the printing and typeetting industry.Lorem Ipsum has
                 been the industry's standard dummy text

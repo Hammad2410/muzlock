@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     title: {
         //position: "absolute",
         alignSelf: "center",
-        fontSize: heightPercentageToDP("2.4%"),
+        fontSize: heightPercentageToDP("2%"),
         color: Colors.black,
         textAlign: 'center',
         paddingTop: heightPercentageToDP("5%"),

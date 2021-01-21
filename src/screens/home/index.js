@@ -4,13 +4,13 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { Content } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { Header, Left, Right, Body, Thumbnail, Button, Title } from 'native-base';
+import { Header, Left, Right, Body, Thumbnail, Button, Title, Container } from 'native-base';
 import { Colors } from '../../styles/colors';
 import Swipeable from 'react-native-gesture-handler/Swipeable'
 
 const homeScreen = ({ navigation }) => {
     return (
-        <Content contentContainerStyle={{ flex: 1 }}>
+        <Container style={{ flex: 1 }}>
             <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
                 <Left style={{ flex: 1 }}>
                     <TouchableOpacity
@@ -65,7 +65,7 @@ const homeScreen = ({ navigation }) => {
                 }}
                 keyExtractor={(item, index) => index.toString()}
             />
-        </Content>
+        </Container>
     )
 }
 

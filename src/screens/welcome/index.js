@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Content, Button, Container } from 'native-base';
-import Swiper from '../../components/Swiper';
+import Swiper from 'react-native-swiper';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 import styles from './styles';
 import GradientText from '../../components/GradientText';
@@ -9,7 +9,7 @@ import { heightPercentageToDP, widthPercentageToDP } from "../../components/Reac
 
 function welcome(props) {
 
-    const [idActive, setIdActive] = useState()
+    const [idActive, setIdActive] = useState(0)
 
     const swiper = useRef(null)
 
@@ -17,7 +17,7 @@ function welcome(props) {
         if (idActive == 3) {
             //  _onDone();
 
-            props.navigation.navigate("VerifyNumber")
+            props.navigation.navigate("LoginScreen")
 
             return
         }
@@ -30,6 +30,7 @@ function welcome(props) {
     }
 
 
+
     return (
 
         <Content contentContainerStyle={{ flex: 1, backgroundColor: '#fff' }}>
@@ -38,7 +39,8 @@ function welcome(props) {
                 activeDot={<View style={styles.activedot} />}
                 loop={false}
                 ref={swiper}
-                onIndexChanged={(index) => setIdActive(index)}>
+                onIndexChanged={(index) => setIdActive(index)}
+            >
                 <View style={styles.IntroView} key={"1"}>
 
                     <Image
@@ -49,11 +51,11 @@ function welcome(props) {
                             width: widthPercentageToDP("25%")
                         }}
                     />
-                    <Text style={styles.title}>MuzLock</Text>
+                    <Text style={[styles.title, { fontWeight: 'bold', fontSize: 20 }]}>MuzLock</Text>
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/intro/slide-1.png")}
-                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                        style={{ height: heightPercentageToDP("42.5%"), width: widthPercentageToDP("60%") }}
                     />
 
                     <GradientText text={"Discover"} />
@@ -71,11 +73,11 @@ function welcome(props) {
                         source={require("../../assets/logo.png")}
                         style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
                     />
-                    <Text style={styles.title}>MuzLock</Text>
+                    <Text style={[styles.title, { fontWeight: 'bold', fontSize: 20 }]}>MuzLock</Text>
                     <Image
                         resizeMode="contain"
                         source={require("../../assets/intro/slide-2.png")}
-                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                        style={{ height: heightPercentageToDP("42.5%"), width: widthPercentageToDP("60%") }}
                     />
 
                     <GradientText text={"Match"} />
@@ -89,13 +91,13 @@ function welcome(props) {
                         source={require("../../assets/logo.png")}
                         style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
                     />
-                    <Text style={styles.title}>MuzLock</Text>
+                    <Text style={[styles.title, { fontWeight: 'bold', fontSize: 20 }]}>MuzLock</Text>
                     <Image
                         resizeMode="contain"
-                        source={require("../../assets/intro/slide-3.png")}
+                        source={require("../../assets/intro/slide-4.png")}
                         style={{
-                            height: heightPercentageToDP("40%"),
-                            width: widthPercentageToDP("55%")
+                            height: heightPercentageToDP("42.5%"),
+                            width: widthPercentageToDP("60%")
                         }}
                     />
 
@@ -109,11 +111,11 @@ function welcome(props) {
                         source={require("../../assets/logo.png")}
                         style={{ height: heightPercentageToDP('10%'), width: widthPercentageToDP("25%") }}
                     />
-                    <Text style={styles.title}>MuzLock</Text>
+                    <Text style={[styles.title, { fontWeight: 'bold', fontSize: 20 }]}>MuzLock</Text>
                     <Image
                         resizeMode="contain"
-                        source={require("../../assets/intro/slide-4.png")}
-                        style={{ height: heightPercentageToDP("35%"), width: widthPercentageToDP("50%") }}
+                        source={require("../../assets/intro/slide-3.png")}
+                        style={{ height: heightPercentageToDP("42.5%"), width: widthPercentageToDP("60%") }}
                     />
 
                     <GradientText text={"Premium Club"} />
@@ -122,13 +124,13 @@ function welcome(props) {
                 </View>
             </Swiper>
             <View style={{ flexDirection: 'row', marginVertical: 10, justifyContent: 'space-around' }}>
-                {/* {idActive != 0 && <Button
+                {idActive != 0 && <Button
                     onPress={() => onPressBack()}
                     rounded
                     block
                     style={styles.IntroBtn}>
                     <Text style={styles.IntroText}>{'Previous'}</Text>
-                </Button>} */}
+                </Button>}
                 <Button
                     onPress={() => onPressNext()}
                     rounded

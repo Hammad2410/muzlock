@@ -54,8 +54,7 @@ const ChatDetails = ({ navigation, route }) => {
                 <Body style={{ flex: 1, flexDirection: 'row', marginLeft: '-10%' }}>
                     <Thumbnail small source={ProfileUrl} />
                     <Text style={{ marginHorizontal: '3%', marginVertical: '2%' }}>
-
-                        {JSON.stringify(ProfileName)}
+                        {ProfileName}
                     </Text>
                 </Body>
                 <Right>

@@ -109,7 +109,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="Profile">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />

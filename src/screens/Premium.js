@@ -9,26 +9,21 @@ const Premium = () => {
     return (
         <Content contentContainerStyle={{ flex: 1 }}>
             <Swiper
+                style={{ height: heightPercentageToDP("50%") }}
                 dot={<View style={styles.dot} />}
                 activeDot={<View style={styles.activedot} />}
             >
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/1.jpg')} />
+                    <Image resizeMode='cover' source={require('../assets/premiummatchpage/dating.jpg')} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/2.jpg')} />
+                    <Image resizeMode='contain' source={require('../assets/premiummatchpage/dating1.jpg')} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/3.jpg')} />
+                    <Image resizeMode='contain' source={require('../assets/premiummatchpage/dating2.jpg')} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/4.jpg')} />
-                </View>
-                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/5.jpg')} />
-                </View>
-                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image source={require('../assets/premiummatchpage/6.jpg')} />
+                    <Image resizeMode='contain' source={require('../assets/premiummatchpage/dating3.jpg')} />
                 </View>
             </Swiper>
             <View style={styles.text}>

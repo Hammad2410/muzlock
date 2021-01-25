@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
         fontSize: heightPercentageToDP("2%"),
         color: Colors.black,
         textAlign: 'center',
-        paddingTop: heightPercentageToDP("5%"),
+        paddingTop: heightPercentageToDP("0.5%"),
         paddingHorizontal: 50,
-        lineHeight: heightPercentageToDP("3.5%"),
+        //lineHeight: heightPercentageToDP("3.5%"),
         letterSpacing: 0.67
     },
     skipText: {
@@ -39,24 +39,24 @@ const styles = StyleSheet.create({
     dot: {
         backgroundColor: '#FFF',
         borderColor: '#070707',
-        width: 8,
-        height: 8,
-        borderRadius: 6,
-        marginLeft: 3,
-        marginRight: 3,
-        marginTop: 3,
-        marginBottom: 3,
-        borderWidth: 1
-    },
-    activedot: {
-        backgroundColor: Colors.button,
         width: 12,
         height: 12,
         borderRadius: 6,
         marginLeft: 3,
         marginRight: 3,
         marginTop: 3,
-        marginBottom: 3
+        marginBottom: 10,
+        borderWidth: 1
+    },
+    activedot: {
+        backgroundColor: Colors.black,
+        width: 12,
+        height: 12,
+        borderRadius: 6,
+        marginLeft: 3,
+        marginRight: 3,
+        marginTop: 3,
+        marginBottom: 10
     },
     IntroView: {
         flex: 1,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     IntroBtn: {
         // flex: 1,
         width: wp('35%'),
-        marginBottom: 10,
+        marginBottom: 15,
         backgroundColor: Colors.button,
         alignSelf: 'center',
         justifyContent: 'center',
@@ -76,19 +76,21 @@ const styles = StyleSheet.create({
         color: 'white',
         alignSelf: 'center',
         fontSize: 14,
+        fontWeight: 'bold'
     },
     continueBtn:
     {
-        marginTop: '5%',
+        marginBottom: '30%',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         borderWidth: 1,
         borderColor: '#eb3f50',
-        width: wp('35%'),
-        borderRadius: 20,
-        height: 40,
-        backgroundColor: '#f2384a'
+        width: wp('40%'),
+        borderRadius: 25,
+        //height: 50,
+        backgroundColor: '#f2384a',
+        paddingVertical: 15
     }
 });
 

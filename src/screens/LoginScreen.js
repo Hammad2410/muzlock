@@ -87,11 +87,12 @@ export default LoginScreen;
 const styles = StyleSheet.create({
     btnstyle:
     {
-        elevation: 3,
+        elevation: 5,
         flexDirection: 'row',
         borderRadius: 25, width: wp('60%'),
         alignSelf: 'center',
-        marginTop: '3%', height: 50, paddingTop: 1
+        marginTop: '3%', height: 50, paddingTop: 1,
+        backgroundColor: '#FFF'
     },
     btntextstyle:
     {

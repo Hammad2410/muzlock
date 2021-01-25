@@ -25,71 +25,133 @@ const homeScreen = ({ navigation }) => {
         setTimeout(() => { setShowReject(false) }, 1000)
     }
 
+    const navigateToMatch = () => {
+        navigation.navigate('Matches')
+    }
+
+    const navigateToFilter = () => {
+        navigation.navigate('Filter')
+    }
 
     return (
         <Container style={{ flex: 1 }}>
-            <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
-                <Left style={{ flex: 1 }}>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('Matches')} >
-                        <Thumbnail small
-                            square source={require('../../assets/swipepageicons/heart.png')} />
-                    </TouchableOpacity>
-                </Left>
-                <Body style={{ flex: 1 }}>
-                    <Thumbnail small square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
-                </Body>
+            <Content>
+                <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
+                    <Left style={{ flex: 1 }}>
+                        <TouchableOpacity
+                            onPress={navigateToMatch}
+                        >
+                            <Thumbnail small
+                                square source={require('../../assets/swipepageicons/heart.png')} />
+                        </TouchableOpacity>
+                    </Left>
+                    <Body style={{ flex: 1 }}>
+                        <Thumbnail small square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                    </Body>
 
+                    <Right style={{ flex: 1 }} >
+                        <TouchableOpacity onPress={navigateToFilter} >
+                            <Thumbnail small
+                                square source={require('../../assets/swipepageicons/filter.png')} />
+                        </TouchableOpacity>
+                    </Right>
 
-                <Right style={{ flex: 1 }} >
-                    <TouchableOpacity onPress={() => navigation.navigate('Filter')} >
-                        <Thumbnail small
-                            square source={require('../../assets/swipepageicons/filter.png')} />
-                    </TouchableOpacity>
-                </Right>
-
-            </Header>
-            <FlatList
+                </Header>
+                {/* <FlatList
                 style={{ paddingHorizontal: 15 }}
                 data={[1, 2]}
                 renderItem={({ items, index }) => {
-                    return (
-                        <View style={{ width: '100%', height: 450, marginVertical: 5 }}>
-                            <DeckSwiper
-                                dataSource={[1, 2, 3]}
-                                renderItem={item1 =>
-                                    <View style={{ width: '100%', height: 450, borderRadius: 15, marginVertical: 5, elevation: 5 }}>
-                                        <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: 450, borderRadius: 15 }} />
+                    return ( */}
+                <Content contentContainerStyle={{ flex: 1 }} style={{ width: '100%', height: hp("170%"), marginVertical: 5, paddingHorizontal: 15 }}>
+                    <DeckSwiper
+                        dataSource={[1, 2, 3]}
+                        renderItem={item1 =>
+                            <>
+                                <View style={{ width: '100%', height: hp("80%"), borderRadius: 15, marginVertical: 15, elevation: 5 }}>
+                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', borderRadius: 15, height: hp("80%") }} />
 
-                                        <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
-                                            <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
-                                                <Thumbnail small source={require('../../assets/swipepageicons/star.png')} />
-                                                <Thumbnail small source={require('../../assets/swipepageicons/reverse.png')} />
-                                                <Thumbnail small source={require('../../assets/swipepageicons/chat.png')} />
+                                    <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
+                                        <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
+                                            <Thumbnail small source={require('../../assets/swipepageicons/star.png')} />
+                                            <Thumbnail small source={require('../../assets/swipepageicons/reverse.png')} />
+                                            <Thumbnail small source={require('../../assets/swipepageicons/chat.png')} />
+                                        </View>
+                                        <Text style={{ fontWeight: 'bold', fontSize: 24, color: Colors.white }}>Hammad, 24</Text>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                                <Text style={{ color: Colors.white }}>Location</Text>
                                             </View>
-                                            <Text style={{ fontWeight: 'bold', fontSize: 24, color: Colors.white }}>Hammad, 24</Text>
-                                            <View style={{ flexDirection: 'row' }}>
-                                                <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
-                                                    <Text style={{ color: Colors.white }}>Location</Text>
-                                                </View>
-                                                <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
-                                                    <Text style={{ color: Colors.white }}>Engineer</Text>
-                                                </View>
+                                            <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                                <Text style={{ color: Colors.white }}>Engineer</Text>
                                             </View>
                                         </View>
                                     </View>
+                                </View>
+                                <View style={{ width: '100%', height: hp("80%"), borderRadius: 15, marginVertical: 5, elevation: 5 }}>
+                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: hp("80%"), borderRadius: 15 }} />
 
-                                }
-                                onSwipeRight={reject}
-                                onSwipeLeft={like}
-                            />
-                        </View>
+                                    <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
+                                        <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
+                                            <Thumbnail small source={require('../../assets/swipepageicons/star.png')} />
+                                            <Thumbnail small source={require('../../assets/swipepageicons/reverse.png')} />
+                                            <Thumbnail small source={require('../../assets/swipepageicons/chat.png')} />
+                                        </View>
+                                        <Text style={{ fontWeight: 'bold', fontSize: 24, color: Colors.white }}>Hammad, 24</Text>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                                <Text style={{ color: Colors.white }}>Location</Text>
+                                            </View>
+                                            <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                                <Text style={{ color: Colors.white }}>Engineer</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                            </>
+                        }
+                        onSwipeRight={reject}
+                        onSwipeLeft={like}
+                    />
 
-                    )
+                </Content>
+                {/* <View style={{ width: '100%', height: hp("80%"), marginVertical: 50, paddingHorizontal: 15 }}>
+                    <DeckSwiper
+                        dataSource={[1, 2, 3]}
+                        renderItem={item1 =>
+                            <View style={{ width: '100%', height: hp("80%"), borderRadius: 15, marginVertical: 5, elevation: 5 }}>
+                                <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: hp("80%"), borderRadius: 15 }} />
+
+                                <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
+                                    <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
+                                        <Thumbnail small source={require('../../assets/swipepageicons/star.png')} />
+                                        <Thumbnail small source={require('../../assets/swipepageicons/reverse.png')} />
+                                        <Thumbnail small source={require('../../assets/swipepageicons/chat.png')} />
+                                    </View>
+                                    <Text style={{ fontWeight: 'bold', fontSize: 24, color: Colors.white }}>Hammad, 24</Text>
+                                    <View style={{ flexDirection: 'row' }}>
+                                        <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                            <Text style={{ color: Colors.white }}>Location</Text>
+                                        </View>
+                                        <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
+                                            <Text style={{ color: Colors.white }}>Engineer</Text>
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+
+                        }
+                        onSwipeRight={reject}
+                        onSwipeLeft={like}
+                    /> */}
+
+                {/* </View> */}
+                {/* )
                 }}
                 keyExtractor={(item, index) => index.toString()}
 
-            />
+            /> */}
+
+            </Content>
             {
                 showLike && <View style={{ position: "absolute", top: '50%', right: 25, }}>
                     {/* <Thumbnail source={require('../../assets/settingpage/settingicon/setting.png')} /> */}

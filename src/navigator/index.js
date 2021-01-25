@@ -27,7 +27,7 @@ import ChatDetails from '../screens/chat/ChatDetails';
 import SearchForAnswer from '../screens/SearchForAnswer';
 import SuccessStories from '../screens/SuccessStories';
 import ProfileDetails from '../screens/ProfileDetailsAddPhotosAndOthers';
-
+import YourProfile from '../screens/YourProfile';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -109,7 +109,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="welcome">
+            <Stack.Navigator initialRouteName="YourProfile">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -171,6 +171,11 @@ const main = () => {
 
                 <Stack.Screen component={ProfileDetails}
                     name="ProfileDetails"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={YourProfile}
+                    name="YourProfile"
                     options={{ header: () => null }}
                 />
 

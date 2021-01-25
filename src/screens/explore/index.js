@@ -23,7 +23,10 @@ const tabStyles = {
 const exploreScreen = ({ navigation }) => {
     return (
         <Content contentContainerStyle={{ flex: 1, backgroundColor: Colors.backgroundColor }}>
-            <Header hasTabs style={{ backgroundColor: 'transparent', elevation: 0 }}>
+            <Header hasTabs style={{
+                backgroundColor: 'transparent',
+                elevation: 0
+            }}>
                 <Left style={{ flex: 1 }} />
                 <Body style={{ flex: 1 }}>
                     <Thumbnail
@@ -35,7 +38,15 @@ const exploreScreen = ({ navigation }) => {
                 <GradientText text={"EXPLORE"} />
             </View>
 
-            <Tabs renderTabBar={() => <ScrollableTab />} tabBarUnderlineStyle={{ height: 2, backgroundColor: Colors.button }} tabContainerStyle={{ backgroundColor: Colors.button, elevation: 0 }}>
+            <Tabs renderTabBar={() => <ScrollableTab />}
+                tabBarUnderlineStyle={{
+                    height: 2,
+                    backgroundColor: Colors.button
+                }}
+                tabContainerStyle={{
+                    backgroundColor: Colors.button,
+                    elevation: 0
+                }}>
                 <Tab heading={"VISITED YOU"} {...tabStyles}>
                     <View style={{ alignItems: 'center' }}>
                         <Text style={{

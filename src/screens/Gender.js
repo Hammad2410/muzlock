@@ -40,7 +40,7 @@ const Gender = ({ navigation }) => {
                 onPress={() => navigation.navigate('SelfieVerification')}
                 style={styles.continueBtn}>
 
-                <Text style={{ color: '#fff', fontSize: 15 }}>
+                <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>
                     Continue
              </Text>
             </TouchableOpacity>
@@ -66,20 +66,22 @@ const styles = StyleSheet.create({
     genderText: {
         color: 'red',
         alignSelf: 'center',
+        fontWeight: "bold"
         // alignItems: 'center'
     },
     continueBtn:
     {
-        marginVertical: "10%",
+        marginBottom: '30%',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         borderWidth: 1,
         borderColor: '#eb3f50',
-        width: wp('35%'),
-        borderRadius: 20,
-        height: 40,
-        backgroundColor: '#f2384a'
+        width: wp('40%'),
+        borderRadius: 25,
+        //height: 50,
+        backgroundColor: '#f2384a',
+        paddingVertical: 10
 
     }
 })

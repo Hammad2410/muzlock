@@ -5,15 +5,16 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 export const btn = StyleSheet.create({
     bottomBtn:
     {
-        marginBottom: 10,
+        marginBottom: '10%',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         borderWidth: 1,
         borderColor: '#eb3f50',
-        width: wp('35%'),
-        borderRadius: 20,
-        height: 40,
-        backgroundColor: '#f2384a'
+        width: wp('40%'),
+        borderRadius: 25,
+        //height: 50,
+        backgroundColor: '#f2384a',
+        paddingVertical: 10
     }
 })

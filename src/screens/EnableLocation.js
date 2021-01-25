@@ -39,7 +39,7 @@ const EnableLocation = ({ navigation }) => {
                     onPress={() => navigation.navigate('tab')}
                     style={[btn.bottomBtn, { marginBottom: '14%', }]}>
 
-                    <Text style={{ color: '#fff', fontSize: 15 }}>
+                    <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>
                         Enable
              </Text>
                 </TouchableOpacity>

@@ -97,7 +97,7 @@ const VerifyNumber = ({ navigation }) => {
                 onPress={() => navigation.navigate('ConfirmationCode')}
                 style={[styles.continueBtn, { marginVertical: 20 }]}>
 
-                <Text style={{ color: '#fff', fontSize: 15 }}>
+                <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>
                     Continue
              </Text>
             </TouchableOpacity>
@@ -127,17 +127,16 @@ const styles = StyleSheet.create({
     },
     continueBtn:
     {
-        // marginTop: '5%',
-
+        marginBottom: '30%',
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         borderWidth: 1,
         borderColor: '#eb3f50',
-        width: wp('30%'),
-        borderRadius: 20,
-        height: 50,
+        width: wp('40%'),
+        borderRadius: 25,
+        //height: 50,
         backgroundColor: '#f2384a',
-
+        paddingVertical: 10
     }
 })

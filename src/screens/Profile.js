@@ -275,7 +275,7 @@ const Profile = ({ navigation }) => {
                             <Swiper style={styles.wrapper}
                             >
                                 <View style={styles.slide1}>
-                                    <View style={{
+                                    {/* <View style={{
                                         flexDirection: 'row',
                                         justifyContent: 'space-between',
                                         padding: 5, width: wp('40%'),
@@ -306,7 +306,7 @@ const Profile = ({ navigation }) => {
                                             size="small"
                                             onToggle={() => setHideAge(!hideAge)}
                                         />
-                                    </View>
+                                    </View> */}
 
 
                                     <Text style={styles.text}>
@@ -354,17 +354,13 @@ const Profile = ({ navigation }) => {
 
 
 
-
-
-
-
                         <View style={{
                             flexDirection: 'row',
                             borderBottomWidth: 1,
                             borderBottomColor: 'grey',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: hp('20%')
+                            height: hp('25%')
                         }}>
                             <TouchableOpacity
                                 style={{
@@ -562,7 +558,7 @@ const styles = StyleSheet.create({
     modalMainView:
     {
         // marginTop: '15%',
-        height: '65%',
+        height: hp('75%'),
         width: '90%',
         alignSelf: 'center',
         marginTop: '10%',

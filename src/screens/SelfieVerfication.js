@@ -39,7 +39,7 @@ const SelfieVerification = ({ navigation }) => {
                 onPress={() => navigation.navigate('EnableLocation')}
                 style={[btn.bottomBtn, { marginVertical: 35 }]}>
 
-                <Text style={{ color: '#fff', fontSize: 15 }}>
+                <Text style={{ color: '#fff', fontSize: 15, fontWeight: 'bold' }}>
                     Next
              </Text>
             </TouchableOpacity>

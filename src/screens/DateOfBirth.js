@@ -58,11 +58,14 @@ const DateOfBirth = ({ navigation }) => {
 
 
             </Content>
-            <View style={{ marginVertical: '10%' }}>
+            <View style={{
+
+                marginVertical: '20%'
+            }}>
                 <TouchableOpacity
                     onPress={() => navigation.navigate('Gender')}
                     style={[styles.continueBtn, { marginBottom: 10 }]}>
-                    <Text style={{ color: '#fff' }}>
+                    <Text style={{ color: '#fff', fontWeight: 'bold' }}>
                         Continue
             </Text>
                 </TouchableOpacity>

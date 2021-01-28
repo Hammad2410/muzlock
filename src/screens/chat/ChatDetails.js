@@ -166,13 +166,13 @@ const ChatDetails = ({ navigation, route }) => {
                                 <Text style={{ fontWeight: 'bold', fontSize: 12, color: Colors.white, marginVertical: 15 }}>662 miles away, Woodland</Text>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
-                                        <Text style={{ color: Colors.white }}>Location</Text>
+                                        <Text style={{ color: Colors.white }}>Bangladeshi</Text>
                                     </View>
                                     <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
                                         <Text style={{ color: Colors.white }}>Engineer</Text>
                                     </View>
                                     <View style={{ backgroundColor: Colors.badge, padding: 5, margin: 5, borderRadius: 15, paddingHorizontal: 15 }}>
-                                        <Text style={{ color: Colors.white }}>Engineer</Text>
+                                        <Text style={{ color: Colors.white }}>Qatar</Text>
                                     </View>
                                 </View>
                             </View>

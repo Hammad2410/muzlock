@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import Swiper from '../components/Swiper';
 import { Content } from 'native-base';
 import { Colors } from '../styles/colors';
 import { heightPercentageToDP, widthPercentageToDP } from "../components/React Native Responsive Screen/";
+import PremiumModal from '../components/premiumModal';
+
+
 
 const Premium = () => {
+    const [modalVisible, setModalVisible] = useState(false);
+
     return (
         <Content contentContainerStyle={{ flex: 1 }}>
             <Swiper
@@ -35,11 +40,12 @@ const Premium = () => {
                 It has survived not only five centuries, but also the leap into electronic typesetting,
              remaining essentially unchanged. It was popularised in the 1960s with the </Text>
                 <Content>
-                    <TouchableOpacity style={styles.bottomBtn}>
+                    <TouchableOpacity style={styles.bottomBtn} onPress={() => setModalVisible(true)}>
                         <Text style={{ color: "white", fontSize: 18, textAlign: "center" }}>Try Premium For Free</Text>
                     </TouchableOpacity>
                 </Content>
             </View>
+            <PremiumModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
         </Content>
 
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
         marginLeft: 3,
         marginRight: 3,
         marginTop: 3,
-        marginBottom: 3,
+        marginBottom: heightPercentageToDP("55%"),
         borderWidth: 1
     },
     activedot: {
@@ -96,7 +102,7 @@ const styles = StyleSheet.create({
         marginLeft: 3,
         marginRight: 3,
         marginTop: 3,
-        marginBottom: 3
+        marginBottom: heightPercentageToDP("55%"),
     },
 
 })

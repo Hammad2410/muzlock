@@ -7,6 +7,16 @@ import ToggleSwitch from 'toggle-switch-react-native';
 import Swiper from 'react-native-swiper';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import PremiumModal from '../components/premiumModal';
+
+const tabStyles = {
+    activeTextStyle: { color: Colors.button, fontWeight: 'bold' },
+    textStyle: { color: Colors.grey, fontWeight: 'bold' },
+    activeTabStyle: { color: Colors.button, lineHeight: 12, backgroundColor: Colors.backgroundColor },
+    style: { backgroundColor: Colors.backgroundColor },
+    tabStyle: { backgroundColor: Colors.backgroundColor }
+}
+
 const Profile = ({ navigation }) => {
     const [profileCompletedPercent, setProfileCompletedPercent] = useState('30%')
     const [profileName, setProfileName] = useState('Aneesa');
@@ -48,7 +58,7 @@ const Profile = ({ navigation }) => {
 
     ])
     return (
-        <Content >
+        <Content style={{ marginVertical: 10, backgroundColor: "#FFF" }} >
             <View>
                 <View style={{
                     borderRadius: 65, justifyContent: 'center',
@@ -205,32 +215,6 @@ const Profile = ({ navigation }) => {
             </View>
 
 
-            {/* <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-                <TouchableOpacity style={{ margin: '2%' }}>
-                    <Image style={{
-                        width: wp('20%'), height: hp('15%')
-                    }}
-                        source={require('../assets/settingpage/carosalimages/daily.png')}
-                    />
-                </TouchableOpacity>
-
-                <TouchableOpacity style={{ margin: '2%' }}>
-                    <Image style={{
-                        width: wp('20%'), height: hp('15%')
-                    }}
-                        source={require('../assets/settingpage/carosalimages/daily.png')}
-                    />
-                </TouchableOpacity>
-                <TouchableOpacity style={{ margin: '2%' }}>
-                    <Image style={{
-                        width: wp('20%'), height: hp('15%')
-                    }}
-                        source={require('../assets/settingpage/carosalimages/daily.png')}
-                    />
-                </TouchableOpacity>
-            </View> */}
-
-
             <TouchableOpacity
                 onPress={() => setModalVisible(true)}
                 style={{
@@ -247,307 +231,8 @@ const Profile = ({ navigation }) => {
                     textAlign: 'center'
                 }}>Try Premium For Free</Text>
             </TouchableOpacity>
+            <PremiumModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
 
-            <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                    Alert.alert("Modal has been closed.");
-                }}
-            >
-                <View style={styles.modalMainView}>
-
-                    <View >
-                        <Text style={{
-                            textAlign: 'center',
-                            fontWeight: 'bold'
-                        }}>Upgrade to Salams Premium</Text>
-
-                        {/* <Text style={{ textAlign: 'center' }}>
-                            Advanced Search Filters
-               </Text> */}
-
-                        {/* <Text style={{ width: wp('80%'), alignSelf: 'center' }}>
-                            Filter by family origin,education and more so that you can find the one quicker!
-                        </Text> */}
-                        <View style={{ height: hp('30%') }}>
-                            <Swiper style={styles.wrapper}
-                            >
-                                <View style={styles.slide1}>
-                                    {/* <View style={{
-                                        flexDirection: 'row',
-                                        justifyContent: 'space-between',
-                                        padding: 5, width: wp('40%'),
-                                        backgroundColor: '#e4ebe7'
-                                    }}>
-                                        <Text>Stealth Mode</Text>
-                                        <ToggleSwitch
-                                            isOn={stealthMode}
-                                            onColor="green"
-                                            offColor="grey"
-                                            size="small"
-                                            onToggle={() => setStealthMode(!stealthMode)}
-                                        />
-                                    </View>
-
-                                    <View style={{
-                                        marginVertical: '4%',
-                                        flexDirection: 'row',
-                                        justifyContent: 'space-between',
-                                        padding: 5, width: wp('40%'),
-                                        backgroundColor: '#e4ebe7'
-                                    }}>
-                                        <Text>Hide Age</Text>
-                                        <ToggleSwitch
-                                            isOn={hideAge}
-                                            onColor="green"
-                                            offColor="grey"
-                                            size="small"
-                                            onToggle={() => setHideAge(!hideAge)}
-                                        />
-                                    </View> */}
-
-
-                                    <Text style={styles.text}>
-                                        Increased Privacy</Text>
-                                    <Text style={{ textAlign: 'center' }}>
-                                        With Stealth Mode, only those you can like can see you , Hide your age too if you want
-                                        </Text>
-                                </View>
-                                <View style={styles.slide2}>
-
-                                    <Text style={styles.text}>Undo Swipes</Text>
-                                    <Text style={{ textAlign: 'center' }}>
-                                        Accidentaly swiped left when you meant to swipe right ? undo it with premium !
-                                        </Text>
-                                </View>
-                                <View style={styles.slide3}>
-                                    <Text style={styles.text}>Advanced Search Filters</Text>
-                                    <Text style={{ textAlign: 'center' }}>
-                                        Filter by family origin, education , and more so that youcan find the one quicker !
-                                        </Text>
-                                </View>
-
-
-
-                                <View style={styles.slide3}>
-                                    <Text style={styles.text}>See who Likes You</Text>
-                                    <Text style={{
-                                        textAlign: 'center', marginHorizontal: '8%',
-                                    }}>
-                                        Instantly match with the people you like and privately pass on the ones you don't
-                                        </Text>
-                                </View>
-
-                                <View style={styles.slide3}>
-
-                                    <Text style={{
-                                        fontWeight: 'bold',
-                                        textAlign: 'center', marginHorizontal: '8%',
-                                    }}>
-                                        Premium Members are More Likely to find their future Spouse. Here's Why...
-                                        </Text>
-                                </View>
-                            </Swiper>
-                        </View>
-
-
-
-                        <View style={{
-                            flexDirection: 'row',
-                            borderBottomWidth: 1,
-                            borderBottomColor: 'grey',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            height: hp('25%')
-                        }}>
-                            <TouchableOpacity
-                                style={{
-                                    flex: 1,
-                                }}>
-                                <Text style={{
-                                    textAlign: 'center',
-                                    borderBottomColor: 'grey',
-                                    borderBottomWidth: 1
-                                }}>
-                                    Best Value
-                 </Text>
-                                <Text style={{ textAlign: 'center', color: 'grey', fontSize: 30, fontWeight: 'bold' }}>
-                                    12
-                 </Text>
-                                <Text style={{
-
-                                    // justifyContent: 'center',
-                                    alignSelf: 'center', textAlign: 'center'
-                                }}>
-                                    months
-                 </Text>
-
-                                <Text style={{
-                                    alignSelf: 'center',
-                                    borderColor: 'grey',
-                                    textAlign: 'center', borderWidth: 1,
-                                    borderRadius: 20,
-                                    width: wp('20%')
-                                }}>
-                                    70.99
-                 </Text>
-                                <Text style={{
-
-                                    // justifyContent: 'center',
-                                    alignSelf: 'center',
-                                    textAlign: 'center'
-                                }} >
-                                    5.91/mon
-        </Text>
-                                <Text style={{
-                                    color: '#fff', padding: 5,
-                                    alignSelf: 'center', backgroundColor: 'red', borderWidth: 1
-                                }}>
-                                    Save 70%
-                   </Text>
-
-                            </TouchableOpacity>
-
-
-
-
-                            <TouchableOpacity style={{
-                                height: hp('20%'),
-
-                                flex: 1,
-                                // width: wp('25%'),
-                                borderColor: '#175aeb',
-                                borderWidth: 1,
-                            }}>
-                                <Text style={{
-                                    color: '#fff',
-                                    textAlign: 'center',
-                                    borderBottomColor: 'grey',
-                                    borderBottomWidth: 1,
-                                    backgroundColor: '#175aeb'
-                                }}>
-                                    Most Popular
-                 </Text>
-                                <Text style={{ textAlign: 'center', color: 'grey', fontSize: 30, fontWeight: 'bold' }}>
-                                    12
-                 </Text>
-
-                                <Text style={{
-
-                                    // justifyContent: 'center',
-                                    alignSelf: 'center', textAlign: 'center'
-                                }}>
-                                    months
-</Text>
-
-                                <Text style={{
-                                    alignSelf: 'center',
-                                    borderColor: 'grey',
-                                    textAlign: 'center', borderWidth: 1,
-                                    borderRadius: 20,
-                                    width: wp('20%')
-                                }}>
-                                    38.99
-                 </Text>
-                                <Text style={{
-
-                                    // justifyContent: 'center',
-                                    alignSelf: 'center',
-                                    textAlign: 'center'
-                                }} >
-                                    5.91/mon
-</Text>
-                                <Text style={{
-                                    color: '#fff', padding: 5,
-                                    alignSelf: 'center', backgroundColor: 'red', borderWidth: 1
-                                }}>
-                                    Save 70%
-</Text>
-
-                            </TouchableOpacity>
-
-
-
-                            <TouchableOpacity style={{
-
-                                // backgroundColor: 'ora',
-                                flex: 1
-                                , marginHorizontal: '2%'
-                            }}>
-                                <Text style={{
-                                    textAlign: 'center',
-                                    borderBottomColor: 'grey',
-                                    borderBottomWidth: 1
-                                }}>
-
-                                </Text>
-                                <Text style={{ textAlign: 'center', color: 'grey', fontSize: 30, fontWeight: 'bold' }}>
-                                    1
-                 </Text>
-                                <Text style={{
-
-                                    // justifyContent: 'center',
-                                    alignSelf: 'center', textAlign: 'center'
-                                }}>
-                                    months
-                 </Text>
-
-                                <Text style={{
-                                    alignSelf: 'center',
-                                    borderColor: 'grey',
-                                    textAlign: 'center', borderWidth: 1,
-                                    borderRadius: 20, width: wp('20%')
-                                }}>
-                                    19.49
-                 </Text>
-
-
-                            </TouchableOpacity>
-
-
-
-
-
-
-
-                        </View>
-
-                        <TouchableHighlight
-                            style={{
-                                marginVertical: '4%',
-                                width: wp('70%'),
-                                height: 40,
-                                justifyContent: 'center',
-                                alignSelf: 'center',
-                                borderWidth: 1, borderRadius: 20,
-                                backgroundColor: '#175aeb',
-                                borderColor: '#175aeb'
-                            }}>
-                            <Text style={{
-                                textAlign: "center",
-                                color: '#fff'
-                            }}>CONTINUE</Text>
-                        </TouchableHighlight>
-
-                        <TouchableHighlight
-                            style={{
-                                alignSelf: 'center',
-                                marginBottom: 5
-                            }}
-                            // style={{ ...styles.openButton, backgroundColor: "#2196F3" }}
-                            onPress={() => {
-                                setModalVisible(!modalVisible);
-                            }}
-                        >
-                            <Text
-                                style={{ color: 'grey' }}
-                            >NO THANKS</Text>
-                        </TouchableHighlight>
-                    </View>
-                </View>
-            </Modal>
 
         </Content >
     )

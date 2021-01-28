@@ -16,11 +16,28 @@ const Settings = ({ navigation }) => {
     const [wali, setWali] = useState(false);
 
     const WaliHandler = () => {
-        alert('Wali')
+        navigation.navigate('Wali')
         setWali(!wali)
     }
     const LockOnExitHandler = () => {
-        alert("Lock")
+
+        navigation.navigate('LockOnExit')
+    }
+    const PrivacyPolicyHandler = () => {
+        navigation.navigate('PrivacyPolicy')
+    }
+    const ShareMazlockHandler = () => {
+        alert('Muzlock')
+    }
+    const ColorSettingHandler = () => {
+
+        navigation.navigate('ColorSettings')
+    }
+    const ReportProblemHandler = () => {
+        alert('Report Problem')
+    }
+    const FeedbackAndReviewHandler = () => {
+        alert('FeedbackAndReview')
     }
 
 
@@ -72,14 +89,19 @@ const Settings = ({ navigation }) => {
                     <SettingComponent
                         iconLeft="mail" textName={email}
                         iconRight="pencil" iconLeftColor="red"
-                        iconRightColor="grey" />
+                        iconRightColor="grey"
+                        handler={ShareMazlockHandler}
+                    />
 
 
                     {/* NumberVerification */}
 
                     <SettingComponent
                         iconLeft="help" textName="Number Verification"
-                        iconRight="pencil" iconLeftColor="red" iconRightColor="grey" />
+                        iconRight="pencil" iconLeftColor="red"
+                        iconRightColor="grey"
+                        handler={ShareMazlockHandler}
+                    />
 
 
 
@@ -128,7 +150,9 @@ const Settings = ({ navigation }) => {
                     <SettingComponent iconLeft="notifications"
                         textName="Privacy Policy"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={PrivacyPolicyHandler}
+                    />
                 </View>
 
 
@@ -139,7 +163,7 @@ const Settings = ({ navigation }) => {
                         iconRightName="chevron-forward"
                         iconLeftClr="red"
                         iconRightClr="grey"
-                        handler={LockOnExitHandler}
+                        handler={WaliHandler}
                     />
                 </View>
 
@@ -175,22 +199,34 @@ const Settings = ({ navigation }) => {
 
 
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="share-social" textName="Share Muzlock" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent iconLeft="share-social"
+                        textName="Share Muzlock" iconRight="chevron-forward"
+                        iconLeftColor="red" iconRightColor="grey" handler={ShareMazlockHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="help" textName="Color Settings" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent iconLeft="help" textName="Color Settings"
+                        iconRight="chevron-forward" iconLeftColor="red"
+                        iconRightColor="grey" handler={ColorSettingHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="alert" textName="Report Problem" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent iconLeft="alert" textName="Report Problem"
+                        iconRight="chevron-forward" iconLeftColor="red"
+                        iconRightColor="grey" handler={ReportProblemHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="help" textName="Feedback And Review" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent iconLeft="help" textName="Feedback And Review"
+                        iconRight="chevron-forward" iconLeftColor="red"
+                        iconRightColor="grey" handler={FeedbackAndReviewHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="settings" textName="Account" iconRight="chevron-forward" iconLeftColor="grey" iconRightColor="grey" />
+                    <SettingComponent iconLeft="settings" textName="Account"
+                        iconRight="chevron-forward" iconLeftColor="grey"
+                        iconRightColor="grey" handler={ShareMazlockHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
-                    <SettingComponent iconLeft="log-out" textName="Log Out" iconRight="chevron-forward" iconLeftColor="red" iconRightColor="grey" />
+                    <SettingComponent iconLeft="log-out" textName="Log Out"
+                        iconRight="chevron-forward" iconLeftColor="red"
+                        iconRightColor="grey" handler={ShareMazlockHandler} />
                 </View>
 
                 <View style={{ marginTop: '6%', justifyContent: 'center', backgroundColor: '#fff' }}>

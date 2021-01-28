@@ -28,6 +28,11 @@ import SearchForAnswer from '../screens/SearchForAnswer';
 import SuccessStories from '../screens/SuccessStories';
 import ProfileDetails from '../screens/ProfileDetailsAddPhotosAndOthers';
 import YourProfile from '../screens/YourProfile';
+import StartChatting from '../screens/StartChatting';
+import PrivacyPolicy from '../screens/PrivacyPolicy';
+import Wali from '../screens/Wali';
+import LockOnExit from '../screens/LockOnExit';
+import ColorSettings from '../screens/ColorSettings';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -109,7 +114,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="YourProfile">
+            <Stack.Navigator initialRouteName="Settings">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -176,6 +181,27 @@ const main = () => {
 
                 <Stack.Screen component={YourProfile}
                     name="YourProfile"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={StartChatting}
+                    name="StartChatting"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={PrivacyPolicy}
+                    name="PrivacyPolicy"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Wali}
+                    name="Wali"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={LockOnExit}
+                    name="LockOnExit"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={ColorSettings}
+                    name="ColorSettings"
                     options={{ header: () => null }}
                 />
 

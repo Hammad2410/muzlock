@@ -35,6 +35,7 @@ import LockOnExit from '../screens/LockOnExit';
 import ColorSettings from '../screens/ColorSettings';
 import ReportProblem from '../screens/ReportProblem';
 import Account from '../screens/Account';
+import Feedback from '../screens/Feedback';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -116,7 +117,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="welcome">
+            <Stack.Navigator initialRouteName="Feedback">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -214,6 +215,12 @@ const main = () => {
 
                 <Stack.Screen component={Account}
                     name="Account"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen
+                    component={Feedback}
+                    name="Feedback"
                     options={{ header: () => null }}
                 />
 

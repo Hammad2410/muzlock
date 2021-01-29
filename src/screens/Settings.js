@@ -35,6 +35,7 @@ const Settings = ({ navigation }) => {
     }
     const ReportProblemHandler = () => {
         alert('Report Problem')
+        navigation.navigate('ReportProblem')
     }
     const FeedbackAndReviewHandler = () => {
         alert('FeedbackAndReview')
@@ -49,6 +50,9 @@ const Settings = ({ navigation }) => {
     }
     const NotificationsHandler = () => {
         setNotifications(!Notifications)
+    }
+    const AccountHandler = () => {
+        navigation.navigate('Account')
     }
     return (
         <ScrollView>
@@ -221,7 +225,7 @@ const Settings = ({ navigation }) => {
                 <View style={{ marginTop: '4%' }}>
                     <SettingComponent iconLeft="settings" textName="Account"
                         iconRight="chevron-forward" iconLeftColor="grey"
-                        iconRightColor="grey" handler={ShareMazlockHandler} />
+                        iconRightColor="grey" handler={AccountHandler} />
                 </View>
                 <View style={{ marginTop: '4%' }}>
                     <SettingComponent iconLeft="log-out" textName="Log Out"

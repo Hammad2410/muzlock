@@ -33,6 +33,8 @@ import PrivacyPolicy from '../screens/PrivacyPolicy';
 import Wali from '../screens/Wali';
 import LockOnExit from '../screens/LockOnExit';
 import ColorSettings from '../screens/ColorSettings';
+import ReportProblem from '../screens/ReportProblem';
+import Account from '../screens/Account';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -114,7 +116,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="Settings">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -204,6 +206,17 @@ const main = () => {
                     name="ColorSettings"
                     options={{ header: () => null }}
                 />
+
+                <Stack.Screen component={ReportProblem}
+                    name="ReportProblem"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={Account}
+                    name="Account"
+                    options={{ header: () => null }}
+                />
+
 
             </Stack.Navigator>
         </View>

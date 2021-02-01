@@ -5,19 +5,21 @@ import { Content } from 'native-base';
 import { Colors } from '../styles/colors';
 import { heightPercentageToDP, widthPercentageToDP } from "../components/React Native Responsive Screen/";
 
-const Premium = () => {
+const Premium = ({ navigation }) => {
     return (
         <Content contentContainerStyle={{ flex: 1 }}>
             <Swiper
                 style={{ height: heightPercentageToDP("50%") }}
                 dot={<View style={styles.dot} />}
-                activeDot={<View style={styles.activedot} />}
+                activeDot={<View style={styles.activedot}
+                />}
             >
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Image resizeMode='cover' source={require('../assets/premiummatchpage/dating.jpg')} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Image resizeMode='contain' source={require('../assets/premiummatchpage/dating1.jpg')} />
+                    <Image resizeMode='contain'
+                        source={require('../assets/premiummatchpage/dating1.jpg')} />
                 </View>
                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Image resizeMode='contain' source={require('../assets/premiummatchpage/dating2.jpg')} />

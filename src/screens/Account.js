@@ -123,7 +123,7 @@ const Account = ({ navigation }) => {
                 <Icon
                     style={{ paddingHorizontal: '5%' }}
                     name="alert-circle-outline" size={30} color="red" />
-                <TouchableOpacity onPress={() => alert('Alert')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Feedback')}>
                     <Text style={{ fontSize: 18, color: 'grey' }}>Deactivate Account</Text>
                 </TouchableOpacity>
             </View>

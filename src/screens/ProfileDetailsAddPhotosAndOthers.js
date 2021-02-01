@@ -18,6 +18,23 @@ const ProfileDetails = ({ navigation }) => {
     const LinkMyInstaPhoto = () => {
         setLinkInstaPhoto(!LinkInstaPhoto)
     }
+    const VideoSelfieVerificationHandler = () => {
+        navigation.navigate('VideoSelfieVerification')
+    }
+    const BasicInfoHandler = () => {
+
+        navigation.navigate('BasicInfo')
+    }
+    const EducationAndCareerHandler = () => {
+        navigation.navigate('EducationAndCareer')
+        // alert('Education And Career')
+    }
+    const EthnicityHandler = () => {
+        alert('Ethnicity')
+    }
+    const LanguageHandler = () => {
+        alert('Language')
+    }
     return (
         <ScrollView>
             <Content contentContainerStyle={{ flex: 1 }}>
@@ -103,7 +120,9 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="videocam"
                         textName="Video Selfie Verification"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={VideoSelfieVerificationHandler}
+                    />
                 </View>
 
                 <View style={{ marginTop: '5%' }}>
@@ -111,7 +130,9 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="menu"
                         textName="Basic Info"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={BasicInfoHandler}
+                    />
                 </View>
 
 
@@ -120,7 +141,8 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="help"
                         textName="Education and Carrier"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={EducationAndCareerHandler} />
                 </View>
 
                 <View style={{ marginTop: '5%' }}>
@@ -128,7 +150,8 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="flag"
                         textName="Ethnicity"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={EthnicityHandler} />
                 </View>
 
 
@@ -138,7 +161,8 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="chatbox"
                         textName="Language"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={LanguageHandler} />
                 </View>
 
 

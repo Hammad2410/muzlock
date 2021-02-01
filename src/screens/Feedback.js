@@ -13,7 +13,7 @@ const Feedback = ({ navigation }) => {
                         <Icon name="arrow-back-outline" size={30} />
                     </TouchableOpacity>
                 </Left>
-                <Body style={{ flex: 1, }}>
+                <Body style={{ flex: 1, marginLeft: '20%' }}>
                     <Thumbnail square
                         source={require('../assets/swipepageicons/header-logo.png')} style={{
                             alignSelf: 'center', flex: 1,
@@ -26,7 +26,7 @@ const Feedback = ({ navigation }) => {
 
             </Header>
 
-            <View style={{ justifyContent: 'center', flex: 1 }}>
+            <View style={{ justifyContent: 'center', }}>
                 <Text style={{
                     fontFamily: 'Questrial-Regular',
                     fontSize: 22,
@@ -101,11 +101,11 @@ const Feedback = ({ navigation }) => {
                 </Text>
 
             <View style={{
-
                 justifyContent: 'flex-end',
                 flex: 1
             }}>
                 <TouchableOpacity style={{
+
                     width: wp('40%'),
                     height: 40,
                     borderRadius: 18,

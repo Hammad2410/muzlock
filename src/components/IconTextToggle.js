@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, Image, ImageBackground, ScrollView, StyleSheet } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import {
+    widthPercentageToDP as wp, heightPercentageToDP
+        as hp
+} from 'react-native-responsive-screen';
 import { Content, Header, Right, Left, Body, Thumbnail } from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ToggleSwitch from 'toggle-switch-react-native';
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
     {
         height: 40, flex: 1,
         flexDirection: 'row',
-        paddingHorizontal: 5,
+        paddingHorizontal: '3%',
         backgroundColor: '#fff',
         width: wp('100%'),
     }

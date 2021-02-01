@@ -36,6 +36,9 @@ import ColorSettings from '../screens/ColorSettings';
 import ReportProblem from '../screens/ReportProblem';
 import Account from '../screens/Account';
 import Feedback from '../screens/Feedback';
+import VideoSelfieVerification from '../screens/VideoSelfieVerification';
+import BasicInfo from '../screens/BasicInfo';
+import EducationAndCareer from '../screens/EducationAndCareer';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -117,7 +120,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="Feedback">
+            <Stack.Navigator initialRouteName="Profile">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -223,6 +226,27 @@ const main = () => {
                     name="Feedback"
                     options={{ header: () => null }}
                 />
+
+                <Stack.Screen
+                    component={VideoSelfieVerification}
+                    name="VideoSelfieVerification"
+                    options={{ header: () => null }}
+                />
+
+
+                <Stack.Screen
+                    component={BasicInfo}
+                    name="BasicInfo"
+                    options={{ header: () => null }}
+                />
+
+
+                <Stack.Screen
+                    component={EducationAndCareer}
+                    name="EducationAndCareer"
+                    options={{ header: () => null }}
+                />
+
 
 
             </Stack.Navigator>

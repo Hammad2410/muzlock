@@ -35,6 +35,21 @@ const ProfileDetails = ({ navigation }) => {
     const LanguageHandler = () => {
         alert('Language')
     }
+    const LifeStyleHandler = () => {
+        navigation.navigate('LifeStyle')
+    }
+    const MaritalStatusHandler = () => {
+        navigation.navigate('MaritalStatus')
+    }
+    const MarriagePlansHandler = () => {
+        navigation.navigate('MarriagePlans')
+    }
+    const ChildrenHandler = () => {
+        navigation.navigate('Childrens')
+    }
+    const RelocationHandler = () => {
+        navigation.navigate('Relocation')
+    }
     return (
         <ScrollView>
             <Content contentContainerStyle={{ flex: 1 }}>
@@ -171,7 +186,9 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="help"
                         textName="Life Style"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={LifeStyleHandler}
+                    />
                 </View>
 
                 <View style={{ marginTop: '5%' }}>
@@ -187,7 +204,8 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="person"
                         textName="Marital Status"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={MaritalStatusHandler} />
                 </View>
 
                 <View style={{ marginTop: '5%' }}>
@@ -195,7 +213,8 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="happy"
                         textName="Children"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={ChildrenHandler} />
                 </View>
 
                 <View style={{ marginTop: '5%' }}>
@@ -203,7 +222,19 @@ const ProfileDetails = ({ navigation }) => {
                         iconLeft="help"
                         textName="Marriage Plans"
                         iconRight="chevron-forward"
-                        iconLeftColor="red" iconRightColor="grey" />
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={MarriagePlansHandler}
+                    />
+                </View>
+
+                <View style={{ marginTop: '5%' }}>
+                    <SettingComponent
+                        iconLeft="help"
+                        textName="Relocation"
+                        iconRight="chevron-forward"
+                        iconLeftColor="red" iconRightColor="grey"
+                        handler={RelocationHandler}
+                    />
                 </View>
 
 

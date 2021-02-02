@@ -10,6 +10,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import GradientText from '../components/GradientText';
 import { RadioButton } from 'react-native-paper';
 import ToggleSwitch from 'toggle-switch-react-native';
+import ScreenInsideProfileHeader from '../components/ScreensInsideProfileHeader';
 const EducationAndCareer = ({ navigation }) => {
     const [checkedEducation, setCheckedEducation] = useState('Matric');
     const [checkedProfession, setCheckedProfession] = useState('Doctor');
@@ -19,7 +20,7 @@ const EducationAndCareer = ({ navigation }) => {
     return (
         <Container>
             <Content style={{ flex: 1 }}>
-                <Header style={{ backgroundColor: '#e3e5e8', elevation: 0 }}>
+                {/* <Header style={{ backgroundColor: '#e3e5e8', elevation: 0 }}>
                     <Left style={{ flex: 1 }} >
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}
@@ -43,7 +44,8 @@ const EducationAndCareer = ({ navigation }) => {
 
                 </Header>
 
-                <Text style={styles.basicInfoText}> Education And Career</Text>
+                <Text style={styles.basicInfoText}> Education And Career</Text> */}
+                <ScreenInsideProfileHeader text="Education And Career" navigation={navigation} />
                 <View style={{
                     marginLeft: 10, borderBottomWidth: 1,
                     borderBottomColor: 'grey', paddingBottom: 10, paddingTop: 10

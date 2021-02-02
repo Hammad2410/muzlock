@@ -10,6 +10,7 @@ import DatePicker from 'react-native-date-picker'
 import Icon from 'react-native-vector-icons/Ionicons';
 import GradientText from '../components/GradientText';
 import { RadioButton } from 'react-native-paper';
+import ScreenInsideProfileHeader from '../components/ScreensInsideProfileHeader';
 
 const BasicInfo = ({ navigation }) => {
     const [date, setDate] = useState(new Date())
@@ -22,7 +23,7 @@ const BasicInfo = ({ navigation }) => {
     return (
         <Container>
             <Content>
-                <Header style={{ backgroundColor: '#e3e5e8', elevation: 0 }}>
+                {/* <Header style={{ backgroundColor: '#e3e5e8', elevation: 0 }}>
                     <Left style={{ flex: 1 }} >
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}
@@ -46,7 +47,9 @@ const BasicInfo = ({ navigation }) => {
 
                 </Header>
 
-                <Text style={styles.basicInfoText}> Basic Info</Text>
+                <Text style={styles.basicInfoText}> Basic Info</Text> */}
+
+                <ScreenInsideProfileHeader text="Basic Info " navigation={navigation} />
 
                 <View style={[styles.NameDOBView, { borderColor: NametextColor }]}>
                     <Text style={{

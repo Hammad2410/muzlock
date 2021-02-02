@@ -39,6 +39,11 @@ import Feedback from '../screens/Feedback';
 import VideoSelfieVerification from '../screens/VideoSelfieVerification';
 import BasicInfo from '../screens/BasicInfo';
 import EducationAndCareer from '../screens/EducationAndCareer';
+import LifeStyle from '../screens/LifeStyle';
+import MaritalStatus from '../screens/MaritalStatus';
+import MarriagePlans from '../screens/MarriagePlans';
+import Childrens from '../screens/Children';
+import Relocation from '../screens/Relocation';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -120,7 +125,7 @@ const main = () => {
     return (
         <View style={{ flex: 1 }}>
 
-            <Stack.Navigator initialRouteName="Profile">
+            <Stack.Navigator initialRouteName="welcome">
 
                 <Stack.Screen component={Welcome} name={"welcome"}
                     options={{ header: () => null }} />
@@ -246,8 +251,36 @@ const main = () => {
                     name="EducationAndCareer"
                     options={{ header: () => null }}
                 />
+                <Stack.Screen
+                    component={LifeStyle}
+                    name="LifeStyle"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={MaritalStatus}
 
+                    name="MaritalStatus"
+                    options={{ header: () => null }}
+                />
 
+                <Stack.Screen
+                    component={MarriagePlans}
+
+                    name="MarriagePlans"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={Childrens}
+
+                    name="Childrens"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={Relocation}
+
+                    name="Relocation"
+                    options={{ header: () => null }}
+                />
 
             </Stack.Navigator>
         </View>

@@ -28,6 +28,22 @@ import SearchForAnswer from '../screens/SearchForAnswer';
 import SuccessStories from '../screens/SuccessStories';
 import ProfileDetails from '../screens/ProfileDetailsAddPhotosAndOthers';
 import YourProfile from '../screens/YourProfile';
+import StartChatting from '../screens/StartChatting';
+import PrivacyPolicy from '../screens/PrivacyPolicy';
+import Wali from '../screens/Wali';
+import LockOnExit from '../screens/LockOnExit';
+import ColorSettings from '../screens/ColorSettings';
+import ReportProblem from '../screens/ReportProblem';
+import Account from '../screens/Account';
+import Feedback from '../screens/Feedback';
+import VideoSelfieVerification from '../screens/VideoSelfieVerification';
+import BasicInfo from '../screens/BasicInfo';
+import EducationAndCareer from '../screens/EducationAndCareer';
+import LifeStyle from '../screens/LifeStyle';
+import MaritalStatus from '../screens/MaritalStatus';
+import MarriagePlans from '../screens/MarriagePlans';
+import Childrens from '../screens/Children';
+import Relocation from '../screens/Relocation';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -176,6 +192,93 @@ const main = () => {
 
                 <Stack.Screen component={YourProfile}
                     name="YourProfile"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={StartChatting}
+                    name="StartChatting"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={PrivacyPolicy}
+                    name="PrivacyPolicy"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={Wali}
+                    name="Wali"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={LockOnExit}
+                    name="LockOnExit"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen component={ColorSettings}
+                    name="ColorSettings"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={ReportProblem}
+                    name="ReportProblem"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen component={Account}
+                    name="Account"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen
+                    component={Feedback}
+                    name="Feedback"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen
+                    component={VideoSelfieVerification}
+                    name="VideoSelfieVerification"
+                    options={{ header: () => null }}
+                />
+
+
+                <Stack.Screen
+                    component={BasicInfo}
+                    name="BasicInfo"
+                    options={{ header: () => null }}
+                />
+
+
+                <Stack.Screen
+                    component={EducationAndCareer}
+                    name="EducationAndCareer"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={LifeStyle}
+                    name="LifeStyle"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={MaritalStatus}
+
+                    name="MaritalStatus"
+                    options={{ header: () => null }}
+                />
+
+                <Stack.Screen
+                    component={MarriagePlans}
+
+                    name="MarriagePlans"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={Childrens}
+
+                    name="Childrens"
+                    options={{ header: () => null }}
+                />
+                <Stack.Screen
+                    component={Relocation}
+
+                    name="Relocation"
                     options={{ header: () => null }}
                 />
 

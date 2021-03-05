@@ -22,14 +22,17 @@ const SearchScreenCardView = ({ imgurl, title, Question1, Question2, Question3,
 
                 flexDirection: 'row'
             }}>
-                <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'grey' }}>{title}  </Text>
+                <Text style={{
+                    fontSize: 18, fontWeight: 'bold', color: 'grey',
+                    fontFamily: 'Questrial-Regular', marginLeft: '5%'
+                }}>{title}  </Text>
                 <Text style={{ marginTop: 5 }}>25 topics such as </Text>
             </View>
             <View style={{ marginTop: '4%' }}>
-                <Text> {Question1}</Text>
-                <Text>{Question2}</Text>
-                <Text>{Question3}</Text>
-                <Text>{Question4} </Text>
+                <Text style={styles.QuestionText}> {Question1}</Text>
+                <Text style={styles.QuestionText}>{Question2}</Text>
+                <Text style={styles.QuestionText}>{Question3}</Text>
+                <Text style={styles.QuestionText}>{Question4} </Text>
             </View>
             <TouchableOpacity style={styles.viewAllTopicsbtn}>
                 <Text style={{ textAlign: 'center', color: 'red' }}>{BtnTitle}</Text>
@@ -50,5 +53,11 @@ const styles = StyleSheet.create({
         borderColor: 'grey',
         width: wp('30%'), borderWidth: 1,
         borderRadius: 25
+    },
+    QuestionText:
+    {
+        fontSize: 18,
+        marginLeft: '4%',
+        marginVertical: 5
     }
 })

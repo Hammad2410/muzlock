@@ -6,7 +6,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const SettingComponent = ({ iconLeft, textName, iconRight,
-    iconLeftColor, iconRightColor }) => {
+    iconLeftColor, iconRightColor, handler }) => {
 
     return (
         <View style={{
@@ -25,7 +25,7 @@ const SettingComponent = ({ iconLeft, textName, iconRight,
             <View style={{ flexDirection: 'row', flex: 1, }}>
                 <Text style={{ marginLeft: '2%', alignSelf: 'center' }}> {textName}</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => handler()}>
                 <Icon style={{
                     paddingVertical: 8,
                     alignSelf: 'center',

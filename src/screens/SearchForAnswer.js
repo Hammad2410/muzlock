@@ -30,6 +30,7 @@ const SearchForAnswer = ({ navigation }) => {
 
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <Image source={require('../assets/logo.png')}
+                            resizeMode="contain"
                             style={{
                                 width: 55, height: 37,
                                 marginLeft: '40%',
@@ -40,7 +41,7 @@ const SearchForAnswer = ({ navigation }) => {
                             }} />
                     </View>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => alert('Shared')}>
                         <Icon name="share-social" size={40} color="grey" />
                     </TouchableOpacity>
 
@@ -71,20 +72,20 @@ const SearchForAnswer = ({ navigation }) => {
                 <SearchScreenCardView
                     imgurl={require('../assets/intro/slide-1.png')}
                     title="Basics"
-                    Question1="What is Muzlock"
-                    Question2="How does muzlock works"
-                    Question3="How does muzlock cost"
-                    Question4="How do i Sign up for muzlock"
+                    Question1="What is Muzlock ?"
+                    Question2="How does muzlock works ?"
+                    Question3="How does muzlock cost ?"
+                    Question4="How do i Sign up for muzlock ?"
                     BtnTitle="View All Topics"
                 />
 
                 <SearchScreenCardView
                     imgurl={require('../assets/intro/slide-1.png')}
                     title="Account"
-                    Question1="Do i hve to upload a photo"
-                    Question2="What is selfie verification"
-                    Question3="How do i change my gender"
-                    Question4="How do i delte my muzlock account"
+                    Question1="Do i hve to upload a photo ?"
+                    Question2="What is selfie verification ?"
+                    Question3="How do i change my gender ?"
+                    Question4="How do i delte my muzlock account ?"
                     BtnTitle="View All Topics"
                 />
 
@@ -92,30 +93,32 @@ const SearchForAnswer = ({ navigation }) => {
                 <SearchScreenCardView
                     imgurl={require('../assets/intro/slide-1.png')}
                     title="Matching"
-                    Question1="How do i match or chat with someone on muzlock"
-                    Question2="What is instant chat"
-                    Question3="How do I filter the profile you show me"
-                    Question4="How do i filter by distance or country"
+                    Question1="How do i match or chat with someone on muzlock ?"
+                    Question2="What is instant chat ?"
+                    Question3="How do I filter the profile you show me ?"
+                    Question4="How do i filter by distance or country ?"
                     BtnTitle="View All Topics"
                 />
 
                 <SearchScreenCardView
                     imgurl={require('../assets/intro/slide-1.png')}
                     title="Explore"
-                    Question1="What is explore"
-                    Question2="What is number n binoculars or red dot next to profile in explore"
-                    Question3="What is Explore's visited you"
-                    Question4="If i favorite someone , do they know"
+                    Question1="What is explore ?"
+                    Question2="What is number n binoculars or red dot next to 
+                    profile in explore ?"
+                    Question3="What is Explore's visited you ?"
+                    Question4="If i favorite someone , do they know ?"
                     BtnTitle="View All Topics"
                 />
 
                 <SearchScreenCardView
                     imgurl={require('../assets/intro/slide-1.png')}
                     title="Privacy"
-                    Question1="Why does your app need my location"
-                    Question2="How oftendo you get my location"
-                    Question3="Why does my city name show up on my profile"
-                    Question4="I don't want to be discoverable any more ,how do i go offline"
+                    Question1="Why does your app need my location ?"
+                    Question2="How oftendo you get my location ?"
+                    Question3="Why does my city name show up on my profile ?"
+                    Question4="I don't want to be discoverable any more ,
+                    how do i go offline ?"
                     BtnTitle="View All Topics"
                 />
 

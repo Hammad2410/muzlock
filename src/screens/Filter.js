@@ -22,7 +22,10 @@ const Filter = ({ navigation }) => {
                             </TouchableOpacity>
                         </Left>
                         <Body style={{ flex: 1 }}>
-                            <Thumbnail square source={require('../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                            <Thumbnail square source={require('../assets/swipepageicons/header-logo.png')} style={{
+                                alignSelf: 'center', flex: 1,
+                                resizeMode: 'contain'
+                            }} />
                         </Body>
 
 

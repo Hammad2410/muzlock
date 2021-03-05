@@ -53,7 +53,7 @@ const ProfileDetails = ({ navigation }) => {
     return (
         <ScrollView>
             <Content contentContainerStyle={{ flex: 1 }}>
-                <Header style={{ backgroundColor: '#fff', elevation: 0 }}>
+                {/* <Header style={{ backgroundColor: '#fff', elevation: 0 }}>
                     <Left style={{ flex: 1 }}>
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}
@@ -71,7 +71,7 @@ const ProfileDetails = ({ navigation }) => {
                     </Body>
                     <Right style={{ flex: 1 }} />
 
-                </Header>
+                </Header> */}
                 <View style={{ backgroundColor: '#fff', paddingBottom: 5 }}>
                     <Text style={styles.profileText}>Profile</Text>
                 </View>

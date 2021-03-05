@@ -168,7 +168,7 @@ const main = () => {
                 <Stack.Screen component={Premium} name="Premium"
                     options={{ header: () => null }}
                 />
-                <Stack.Screen component={Profile} name="Profile"
+                <Stack.Screen component={YourProfile} name="Profile"
                     options={{ header: () => null }}
                 />
 
@@ -185,7 +185,7 @@ const main = () => {
                     options={{ header: () => null }}
                 />
 
-                <Stack.Screen component={ProfileDetails}
+                <Stack.Screen component={YourProfile}
                     name="ProfileDetails"
                     options={{ header: () => null }}
                 />

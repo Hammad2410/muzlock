@@ -34,41 +34,42 @@ const homeScreen = ({ navigation }) => {
     }
 
     return (
-        <Container style={{ flex: 1 }}>
+        <Container style={{ flex: 1, }}>
+            <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
+                <Left style={{ flex: 1 }}>
+                    <TouchableOpacity
+                        onPress={navigateToMatch}
+                    >
+                        <Thumbnail small
+                            square source={require('../../assets/swipepageicons/heart.png')} />
+                    </TouchableOpacity>
+                </Left>
+                <Body style={{ flex: 1 }}>
+                    <Thumbnail small square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
+                </Body>
+
+                <Right style={{ flex: 1 }} >
+                    <TouchableOpacity onPress={navigateToFilter} >
+                        <Thumbnail small
+                            square source={require('../../assets/swipepageicons/filter.png')} />
+                    </TouchableOpacity>
+                </Right>
+
+            </Header>
             <Content>
-                <Header style={{ backgroundColor: 'transparent', elevation: 0 }}>
-                    <Left style={{ flex: 1 }}>
-                        <TouchableOpacity
-                            onPress={navigateToMatch}
-                        >
-                            <Thumbnail small
-                                square source={require('../../assets/swipepageicons/heart.png')} />
-                        </TouchableOpacity>
-                    </Left>
-                    <Body style={{ flex: 1 }}>
-                        <Thumbnail small square source={require('../../assets/swipepageicons/header-logo.png')} style={{ alignSelf: 'center', flex: 1, resizeMode: 'contain' }} />
-                    </Body>
 
-                    <Right style={{ flex: 1 }} >
-                        <TouchableOpacity onPress={navigateToFilter} >
-                            <Thumbnail small
-                                square source={require('../../assets/swipepageicons/filter.png')} />
-                        </TouchableOpacity>
-                    </Right>
-
-                </Header>
                 {/* <FlatList
                 style={{ paddingHorizontal: 15 }}
                 data={[1, 2]}
                 renderItem={({ items, index }) => {
                     return ( */}
-                <Content contentContainerStyle={{ flex: 1 }} style={{ width: '100%', height: hp("170%"), marginVertical: 5, paddingHorizontal: 15 }}>
+                <Content contentContainerStyle={{ flex: 1 }} style={{ width: '100%', height: hp("188%"), marginVertical: 5, paddingHorizontal: 15 }}>
                     <DeckSwiper
                         dataSource={[1, 2, 3]}
                         renderItem={item1 =>
-                            <>
-                                <View style={{ width: '100%', height: hp("80%"), borderRadius: 15, marginVertical: 15, elevation: 5 }}>
-                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', borderRadius: 15, height: hp("80%") }} />
+                            <View style={{ backgroundColor: '#FFF' }}>
+                                <View style={{ width: '100%', height: hp("83%"), borderRadius: 15, marginVertical: 15, elevation: 5 }}>
+                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', borderRadius: 15, height: hp("83%") }} />
 
                                     <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
                                         <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
@@ -87,8 +88,27 @@ const homeScreen = ({ navigation }) => {
                                         </View>
                                     </View>
                                 </View>
-                                <View style={{ width: '100%', height: hp("80%"), borderRadius: 15, marginVertical: 5, elevation: 5 }}>
-                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: hp("80%"), borderRadius: 15 }} />
+                                <View style={{
+                                    marginVertical: '5%',
+                                    borderWidth: 1,
+                                    width: wp('90%'),
+                                    justifyContent: 'center',
+                                    borderRadius: 15,
+                                    alignSelf: 'center',
+                                    paddingHorizontal: 10
+                                    , backgroundColor: '#fff'
+                                }}>
+
+                                    <Text style={{
+                                        // marginHorizontal: '5%',
+
+                                    }}>Lorem ipsum is simply dummy text of
+                                        the printing and typeetting industry.Lorem Ipsum has
+                                        been the industry's standard dummy text
+            eve since the 1500s</Text>
+                                </View>
+                                <View style={{ width: '100%', height: hp("83%"), borderRadius: 15, marginVertical: 5, elevation: 5 }}>
+                                    <Image source={require('../../assets/loginpageslider/3.jpg')} style={{ width: '100%', height: hp("83%"), borderRadius: 15 }} />
 
                                     <View style={{ position: 'absolute', left: 10, bottom: 10, width: '100%' }}>
                                         <View style={{ alignItems: 'flex-end', marginRight: 15 }}>
@@ -107,7 +127,7 @@ const homeScreen = ({ navigation }) => {
                                         </View>
                                     </View>
                                 </View>
-                            </>
+                            </View>
                         }
                         onSwipeRight={reject}
                         onSwipeLeft={like}
